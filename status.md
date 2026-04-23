@@ -72,13 +72,35 @@ Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally 
 
 ---
 
-## 4. The No-Bullet/Narrative Rule — DO NOT FORGET
+## 4. Versioning & SHA-256 Integrity — STANDING REQUIREMENTS
+
+**Versioning scheme:** All snapshot files, zips, and frozen datasets carry `_v1_4232026` suffix. Increment `PACKAGE_VERSION` in `config.py` when pipeline decisions change. Never produce a versioned artifact without the suffix.
+
+**Auto-update rule:** status.md and CLAUDE.md must be updated immediately after every completed task — without user request. esg_prompts.md must be updated when any prompt changes status or produces new outputs. SHA-256 hashes must be recorded in all four locations: snapshot JSON, prompt entry, CLAUDE.md Resolved Decisions, and the reproducibility_manifest inside the step zip.
+
+**Master SHA-256 anchors (v1 — April 23, 2026):**
+
+| File | SHA-256 |
+|---|---|
+| `feature_matrix_v1_frozen.csv` | `a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e` |
+| `esg_corpus_labels.csv` | `97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd` |
+| `snapshot_01_deduplication_v1_4232026.csv` | `ae7f5a54d8ae4b8e93dc23b6b609cd4c568e7c8732a20fa55a5e4814461e2af3` |
+| `snapshot_02_noise_filtering_v1_4232026.csv` | `d67fbb4edff9a39c4c6d1d9c13fda2ae55c68e91da098774744dc54491be5a59` |
+| `snapshot_03_corpus_stats_v1_4232026.csv` | `75cc74176bbf56f8d90fc6e1b907b98e1bcd202289c95b53a684531ac9494fe0` |
+| `snapshot_04_label_construction_v1_4232026.csv` | `97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd` |
+| `snapshot_05_text_cleaning_v1_4232026.csv` | `aaa9f821b49cb1c5cb007453f381340ac473e2758d99becfec887db4a76c1c6e` |
+| `snapshot_06_ml_baseline_v1_4232026.csv` | `590b017fe1c73bd33cac1f52fc7373d225c21fd50a9c386ac074568636eae5a9` |
+| `esg_slide_narrative.md` | `d0aa3af748504d42c4227c7284f28b69ee55a8d55df8e8de7df14bf502fba707` |
+
+---
+
+## 5. The No-Bullet/Narrative Rule — DO NOT FORGET
 
 Every revised slide must be written in narrative prose sentences — no bullet points, no arrow lists, no fragments. Each slide reads as one or two coherent connected paragraphs. The sole exception is the methodology table. This rule applies to every slide without exception.
 
 ---
 
-## 5. Files
+## 6. Files
 
 | File | Location | Description |
 |---|---|---|
@@ -110,7 +132,7 @@ Every revised slide must be written in narrative prose sentences — no bullet p
 
 ---
 
-## 6. Canonical Naming Reference
+## 7. Canonical Naming Reference
 
 | Entity | Correct name |
 |---|---|

@@ -12,7 +12,10 @@
 - **Citations.** Inline numbered references [#] for every factual claim. No footnotes.
 - **Code.** Concise diffs or specific functions only — never reprint entire files.
 - **Prohibited words.** Never use "straightforward," "boundaries," "I cannot assist," or "I need to clarify."
-- **status.md + CLAUDE.md updates.** Update both files iteratively throughout every session — after each completed decision, deliverable, or meaningful step. Do not wait until end of session.
+- **status.md + CLAUDE.md updates — MANDATORY AND AUTOMATIC.** Update both files immediately after every completed task, decision, script execution, or deliverable — without waiting for the user to ask. This is non-negotiable. If a step is finished, both files are updated before moving on. Failure to do this proactively is a session error.
+- **esg_prompts.md updates.** When a prompt changes status (OPEN → SCRIPT WRITTEN → COMPLETE), update `esg_prompts.md` immediately with status, execution results, and SHA-256 hashes of all outputs. Do not wait for user request.
+- **Versioning.** All new snapshot files, zips, and frozen datasets carry the `_{VERSION}_{MDDYYYY}` suffix defined in `config.py`. Never produce a versioned artifact without the suffix.
+- **SHA-256 hashes.** Every completed pipeline step must record SHA-256 hashes of its key output files in: (1) the step's snapshot JSON, (2) the prompt's execution note in `esg_prompts.md`, (3) the relevant section of `CLAUDE.md` Resolved Decisions, and (4) the `reproducibility_manifest_{VERSION}_{DATE}.json` inside the step zip. The frozen feature matrix hash is the master integrity anchor and must appear in all of the above.
 
 ---
 
@@ -47,18 +50,21 @@ Google Drive : `/content/drive/Shared Drives/ESG DL Project/esg_project`
 ```
 esg_project/
 ├── CLAUDE.md
+├── README.md
 ├── status.md
-├── config.py                              # single source of truth for all paths
+├── config.py                              # paths + PACKAGE_VERSION, PACKAGE_DATE, VERSION_SUFFIX
+├── esg_prompts.md                         # canonical prompt list with status + SHA-256
+├── esg_slide_narrative.md                 # Methodology + Limitations slide prose (16 citations)
 ├── 01_esg_deduplicate.py
 ├── 02_non_esg_filter_noise.py
 ├── 03_esg_corpus_stats.py
 ├── 04_esg_label_construction.py
 ├── 05_esg_text_clean.py
-├── 01_manifest.json
-├── 02_manifest.json
-├── 03_manifest.json
-├── 04_manifest.json
-├── 05_manifest.json
+├── 06_esg_ml_baseline.py                  # TF-IDF + RF + XGBoost + SHAP
+├── 07_esg_longformer.py                   # Longformer fine-tuning (Colab GPU)
+├── 08_esg_xai_visualizations.py           # ROC, word clouds, SHAP, t-SNE, attention
+├── 09_create_reproducibility_package.py   # versioned snapshots + per-step zips + SHA-256
+├── 01_manifest.json → 09_manifest.json    # completion state per script
 ├── esg_corpus/                            # 1,282 raw .md files
 ├── esg_corpus_deduped/                    # 918 unique canonical cases
 │   └── esg_corpus_dupes/                  # 364 quarantined duplicates
@@ -67,9 +73,13 @@ esg_project/
 │   ├── esg_filter_log.csv
 │   ├── esg_corpus_pillar_metadata.csv     # per-file pillar scores + flags
 │   └── esg_corpus_stats.txt
+├── snapshots/                             # versioned CSV+JSON per step (_v1_4232026)
+├── step_zips/                             # per-step reproducibility zips with SHA-256 manifests
 └── esg_corpus_outputs/
     ├── esg_corpus_labels.csv              # authoritative label source
-    └── ESG_corpus_cleaned_v1.csv          # authoritative model input
+    ├── ESG_corpus_cleaned_v1.csv          # authoritative model input (git-excluded, 24MB)
+    ├── feature_matrix_v1_frozen.csv       # frozen training input — SHA-256 integrity anchor
+    └── ml_baseline/                       # RF/XGBoost models, SHAP PNGs, metrics JSON
 ```
 
 ---
@@ -109,7 +119,20 @@ Any case with no nexus to environmental conduct, treatment of people, governance
 
 **Class imbalance (April 22, 2026):** S at 10.6%, greenwash at 1 case. SMOTE or class-weighted loss required. 2 greenwash cases lost as false negatives in noise filter — address in limitations slide.
 
-**Reproducibility package (April 23, 2026):** `snapshots/` — 6 versioned snapshot CSV+JSON pairs (suffix `_v1_4232026`). `step_zips/` — 6 per-step zips, each containing snapshot CSV+JSON, manifest, script, step-specific outputs, and `reproducibility_manifest_v1_4232026.json` with SHA-256 for every file. Frozen training input anchor: `feature_matrix_v1_frozen.csv` SHA-256 `a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e`. Jupyter notebook integrity check cell verifies hash on load. 4 commits pushed to GitHub. SSH auth configured (ed25519 key, `~/.ssh/id_ed25519`). Push with `git push origin master` — no PATs needed. GitHub: https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment
+**Versioning scheme (April 23, 2026):** All snapshot files, zips, and frozen datasets carry `_{VERSION}_{MDDYYYY}` suffix. Current: `_v1_4232026`. Version constants in `config.py`: `PACKAGE_VERSION`, `PACKAGE_DATE`, `VERSION_SUFFIX`. Increment `PACKAGE_VERSION` when pipeline decisions change.
+
+**SHA-256 integrity anchors (April 23, 2026):** Every completed step records SHA-256 hashes in its snapshot JSON, prompt entry, and `reproducibility_manifest_v1_4232026.json` inside its zip. Master frozen training input anchor:
+- `feature_matrix_v1_frozen.csv` → `a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e`
+- `esg_corpus_labels.csv` → `97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd`
+- `snapshot_01_deduplication_v1_4232026.csv` → `ae7f5a54d8ae4b8e93dc23b6b609cd4c568e7c8732a20fa55a5e4814461e2af3`
+- `snapshot_02_noise_filtering_v1_4232026.csv` → `d67fbb4edff9a39c4c6d1d9c13fda2ae55c68e91da098774744dc54491be5a59`
+- `snapshot_03_corpus_stats_v1_4232026.csv` → `75cc74176bbf56f8d90fc6e1b907b98e1bcd202289c95b53a684531ac9494fe0`
+- `snapshot_04_label_construction_v1_4232026.csv` → `97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd`
+- `snapshot_05_text_cleaning_v1_4232026.csv` → `aaa9f821b49cb1c5cb007453f381340ac473e2758d99becfec887db4a76c1c6e`
+- `snapshot_06_ml_baseline_v1_4232026.csv` → `590b017fe1c73bd33cac1f52fc7373d225c21fd50a9c386ac074568636eae5a9`
+- `esg_slide_narrative.md` → `d0aa3af748504d42c4227c7284f28b69ee55a8d55df8e8de7df14bf502fba707`
+
+**Reproducibility package (April 23, 2026):** `snapshots/` — 6 versioned snapshot CSV+JSON pairs. `step_zips/` — 6 per-step zips each containing `reproducibility_manifest_v1_4232026.json` with SHA-256 for every file inside. Jupyter notebook integrity check cell asserts frozen matrix hash on load. 5 commits pushed to GitHub via SSH. Remote: `git@github.com:mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment.git`. No PATs — SSH ed25519 key at `~/.ssh/id_ed25519`.
 
 **ML baseline results (April 23, 2026 — executed):** Random Forest Macro-F1 = 0.6078 / MCC = 0.5721 (S recall 0.13 — RF underperforms on sparse high-dimensional features with minority class). XGBoost Macro-F1 = 0.8253 / MCC = 0.8015 (S recall 0.60). XGBoost is the authoritative ML baseline. SHAP plots saved to `esg_corpus_outputs/ml_baseline/`. `06_manifest.json` written.
 
