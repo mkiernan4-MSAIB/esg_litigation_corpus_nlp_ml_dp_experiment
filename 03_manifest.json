@@ -1,0 +1,16 @@
+{
+  "step": "03_corpus_stats",
+  "status": "complete",
+  "input_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered",
+  "files_analyzed": 444,
+  "greenwash_count": 1,
+  "pillar_counts": {
+    "S": 70,
+    "Non-ESG": 134,
+    "E": 106,
+    "G": 134
+  },
+  "csv_path": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered\\esg_corpus_pillar_metadata.csv",
+  "report_path": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered\\esg_corpus_stats.txt",
+  "timestamp": "2026-04-23T03:27:02.464230+00:00"
+}

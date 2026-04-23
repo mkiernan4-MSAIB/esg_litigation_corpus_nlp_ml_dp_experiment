@@ -1,0 +1,12 @@
+{
+  "step": "05_text_clean",
+  "status": "complete",
+  "input_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered",
+  "labels_csv": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\esg_corpus_labels.csv",
+  "files_processed": 444,
+  "over_512_count": 440,
+  "over_512_pct": 99.1,
+  "avg_token_count": 8824.0,
+  "output_csv": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\ESG_corpus_cleaned_v1.csv",
+  "timestamp": "2026-04-23T03:49:38.941490+00:00"
+}

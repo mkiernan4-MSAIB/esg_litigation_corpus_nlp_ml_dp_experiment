@@ -1,0 +1,58 @@
+# ESG Litigation Classifier — .gitignore
+# AIGB 7290 | Huang, Kiernan, Sooknanan
+
+# -------------------------------------------------------------------
+# Raw corpus .md files — proprietary Westlaw documents, not for VCS
+# -------------------------------------------------------------------
+esg_corpus/
+esg_corpus_deduped/*.md
+esg_corpus_deduped/esg_corpus_dupes/
+esg_corpus_filtered/*.md
+esg_corpus_filtered/esg_corpus_excluded/
+
+# -------------------------------------------------------------------
+# Large CSVs with full document text (24MB+ — tracked via zip only)
+# -------------------------------------------------------------------
+esg_corpus_outputs/ESG_corpus_cleaned_v1.csv
+esg_corpus_outputs/ml_baseline/ml_baseline_predictions.csv
+
+# -------------------------------------------------------------------
+# Model checkpoints and embeddings (GB-scale Longformer artifacts)
+# -------------------------------------------------------------------
+esg_corpus_outputs/longformer/
+*.pt
+*.bin
+*.npy
+
+# -------------------------------------------------------------------
+# Python artifacts
+# -------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# -------------------------------------------------------------------
+# Jupyter checkpoints
+# -------------------------------------------------------------------
+.ipynb_checkpoints/
+
+# -------------------------------------------------------------------
+# OS / editor noise
+# -------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# -------------------------------------------------------------------
+# Temporary and intermediate outputs NOT part of the canonical record
+# -------------------------------------------------------------------
+esg_corpus_outputs/visualizations/

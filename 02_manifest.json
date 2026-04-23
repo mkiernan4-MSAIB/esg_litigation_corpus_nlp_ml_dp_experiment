@@ -1,0 +1,10 @@
+{
+  "step": "02_filter_noise",
+  "status": "complete",
+  "input_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_deduped",
+  "output_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered",
+  "retained_count": 444,
+  "excluded_count": 474,
+  "audit_log": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered\\esg_filter_log.csv",
+  "timestamp": "2026-04-23T03:25:06.656638+00:00"
+}

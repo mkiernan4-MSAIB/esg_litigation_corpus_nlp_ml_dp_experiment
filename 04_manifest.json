@@ -1,0 +1,16 @@
+{
+  "step": "04_label_construction",
+  "status": "complete",
+  "metadata_path": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_filtered\\esg_corpus_pillar_metadata.csv",
+  "output_path": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\esg_corpus_labels.csv",
+  "total_cases": 444,
+  "label_distribution": {
+    "S": 47,
+    "Non-ESG": 134,
+    "E": 92,
+    "G": 171
+  },
+  "sustainability_flagged": 64,
+  "greenwash_count": 1,
+  "timestamp": "2026-04-23T03:30:31.280953+00:00"
+}

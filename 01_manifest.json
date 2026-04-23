@@ -1,0 +1,10 @@
+{
+  "step": "01_deduplicate",
+  "status": "complete",
+  "input_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus",
+  "output_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_deduped",
+  "canonical_count": 918,
+  "duplicate_count": 364,
+  "total_input": 1282,
+  "timestamp": "2026-04-23T03:22:04.533931+00:00"
+}

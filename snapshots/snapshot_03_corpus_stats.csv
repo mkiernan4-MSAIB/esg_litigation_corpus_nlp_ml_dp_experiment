@@ -1,0 +1,445 @@
+filename,size_bytes,year,court,pillar_E,pillar_S,pillar_G,pillar_Sus,noise_hits,is_greenwash,is_sustainability,inferred_pillar
+001-BoardofTrusteesoftheUniversityofIllinoisvMicronTechnologyInc.md,27433,2026,Other,0,1,0,0,1,0,0,S
+001-HollandvWest.md,10537,2026,Other,0,0,0,0,0,0,0,Non-ESG
+001-JohnsonvWest.md,6591,2026,Other,0,0,0,0,0,0,0,Non-ESG
+001-PortervGraftechInternationalLtd.md,226982,2025,Other,6,1,3,1,0,0,1,E
+001-SpencevAmericanAirlinesInc.md,160633,2026,ND Tex,5,4,5,3,0,0,1,E
+001-TexasPacificLandCorporationvHorizonKineticsLLC.md,136553,2026,Del Ch,2,5,5,1,0,0,1,S
+002-EasternShipbuildingGroupIncvUnitedStates.md,155115,2026,Other,0,1,1,1,1,0,1,S
+002-MaloleyvWest.md,8402,2026,Other,0,0,0,0,0,0,0,Non-ESG
+002-QianvZheng.md,56607,2025,Other,0,0,2,0,0,0,0,G
+003-ChangvNoh.md,4949,2019,CD Cal,0,0,1,0,0,0,0,G
+003-CraigvTargetCorporation.md,76901,2024,DC Cir,0,2,3,1,0,0,1,G
+003-ESGCapitalPartnersLPvStratos.md,30654,2014,CD Cal,0,0,1,0,0,0,0,G
+004-CentripetalNetworksIncvCiscoSystemsInc.md,28519,2026,Other,0,0,0,0,2,0,0,Non-ESG
+004-TexasvBlackRockInc.md,108618,2025,5th Cir,6,1,4,2,2,0,1,E
+004-WinstonAndStrawnLLPvMid-AtlanticArenaLLC.md,34686,2021,SDNY,0,0,0,0,0,0,0,Non-ESG
+005-EuroactividadeSpringGreenvTownofWyomingBdofReview.md,8240,2026,Other,0,0,0,0,0,0,0,Non-ESG
+005-InreLumenTechnologiesIncSecuritiesLitigationII.md,195431,2025,5th Cir,4,2,3,1,0,0,1,E
+005-OwenvCannon.md,136174,2015,Del Ch,0,0,1,0,0,0,0,G
+006-ChamberofCommerceofUnitedStatesvSecuritiesandExchangeCommission.md,108527,2026,ND Cal,2,0,4,0,0,0,0,G
+006-CollettevMcDonough.md,20034,2023,Other,0,0,0,0,0,0,0,Non-ESG
+006-RichmondGlobalCompassFundManagementGPLLCvJussen.md,12600,2022,Other,0,0,1,0,0,0,0,G
+006-TanoosvState.md,38642,2026,Other,0,0,0,1,0,0,1,Non-ESG
+007-AshfordvShinseki.md,6809,2011,Other,0,0,0,0,0,0,0,Non-ESG
+007-FodorvEasternShipbuildingGroup.md,12594,2013,Other,0,1,0,0,0,0,0,S
+007-UtahvWalsh.md,32680,2023,ND Tex,2,0,7,1,0,0,1,G
+008-HicksvGrimmwayEnterprisesInc.md,20659,2023,Other,0,1,1,1,0,0,1,S
+008-SmithvGuidantGlobalInc.md,37753,2021,Other,0,2,1,0,0,0,0,S
+009-AllianzGlobalInvestorsGmbHvBankofAmericaCorporation.md,33007,2026,SDNY,0,0,0,1,0,0,1,Non-ESG
+009-BrownvStarkka.md,9183,2020,Other,0,1,1,0,0,0,0,S
+009-DzibelavBlackRockInc.md,85029,2024,Other,0,3,2,0,1,0,0,S
+009-NewYorkCityPublicPensionFundsvCoupangInc.md,186783,2025,SDNY,0,2,2,1,2,0,1,S
+009-SynventiveMoldingSolutionsIncvHuskyInjectionMoldingSystemsInc.md,6250,2026,Other,0,0,1,0,1,0,0,G
+009-UnitedStatesvStratos.md,50924,2024,9th Cir,0,0,0,0,0,0,0,Non-ESG
+01-FossievWest.md,18732,2026,Other,0,0,0,0,0,0,0,Non-ESG
+01-HovervGober.md,5529,2026,Other,0,0,0,0,0,0,0,Non-ESG
+01-JohnstonvWest.md,14322,2026,Other,0,0,0,0,0,0,0,Non-ESG
+010-AlbertTrostelAndSonsCompanyvNotz.md,47507,2009,Other,0,0,2,0,0,0,0,G
+010-AmericanNeedleIncvNewOrleansLouisianaSaints.md,11624,2007,Other,0,0,0,0,2,0,0,Non-ESG
+010-JonesvCityofDallasTexas.md,57689,2026,ND Tex,0,1,0,0,0,0,0,S
+010-SchonvFrantz.md,33879,2026,Other,0,0,0,1,0,0,1,Non-ESG
+011-AlbertTrostelAndSonsCovNotz.md,61768,2026,Other,0,1,2,0,0,0,0,G
+011-BhangalvHawaiianElectricIndustriesInc.md,72366,2024,ND Cal,2,0,2,1,0,0,1,E
+011-InreWellsFargoAndCompanyHiringPracticesDerivativeLitigation.md,128156,2024,ND Cal,0,4,5,1,0,0,1,G
+011-KBCAssetManagementNVvDiscoverFinancialServices.md,134537,2025,ND Cal,1,1,4,0,0,0,0,G
+011-dmarcianIncvdmarcianEuropeBV.md,79289,2026,Other,1,0,2,0,3,0,0,G
+012-DumontvUnitedStatesDepartmentoftheAirForce.md,42713,2014,2nd Cir,2,0,1,0,0,0,0,E
+012-ESGTechnicalServicesLLCvAdvantageHealthSolutionsInc.md,62842,2026,Other,0,1,0,0,0,0,0,S
+012-FanucchivEnvivaInc.md,98452,2024,Other,7,0,5,2,0,1,1,E
+012-InreDEISystemsInc.md,36055,2026,2nd Cir,0,1,0,0,0,0,0,S
+012-UnitedStatesSecuritiesandExchangeCommissionvRevenHoldingsInc.md,46116,2026,Other,0,0,2,0,1,0,0,G
+013-CityofOwensborovKentuckyUtilitiesCo.md,15123,2008,Other,0,0,1,0,0,0,0,G
+013-ShawvCollins.md,23459,2025,Other,0,0,0,0,0,0,0,Non-ESG
+013-USvZambrano.md,16932,2026,Other,0,0,0,0,0,0,0,Non-ESG
+014-DahmanvIllinoisDeptofHumanRights.md,17125,2026,Other,1,1,0,0,0,0,0,E
+014-WojcikonbehalfofOmegaHealthcareInvestorsIncvOmegaHealthcareInve.md,35150,2024,Other,0,1,3,1,0,0,1,G
+015-ColdwellvRitecorpEnvironmentalPropertySolutions.md,57632,2017,9th Cir,0,1,1,0,0,0,0,S
+015-EMCCorpvSmith.md,14378,2026,Other,0,0,0,0,0,0,0,Non-ESG
+016-QQCIncvHewlett-PackardCo.md,31079,2026,Other,1,1,1,0,1,0,0,E
+016-WestvBrown.md,16136,2026,Other,0,0,0,0,0,0,0,Non-ESG
+017-HaileyvWest.md,20305,2026,Other,0,0,0,0,0,0,0,Non-ESG
+017-MurrayvPrincipi.md,5465,2001,Other,0,0,0,0,0,0,0,Non-ESG
+018-InreFuBoTVIncSecuritiesLitigation.md,33599,2023,SDNY,0,0,3,0,0,0,0,G
+018-IslandIPAcquisitionsLLCvAntle.md,10834,2023,Other,0,0,1,0,0,0,0,G
+018-SEBInvestmentManagementABvWellsFargoAndCompany.md,37237,2026,SDNY,0,2,1,1,0,0,1,S
+018-SecuritiesIndustryandFinancialMarketsAssociationvAshcroft.md,54443,2026,Other,0,0,5,0,0,0,0,G
+019-CampbellvGECOSGMBH.md,8338,2012,Other,0,0,1,0,0,0,0,G
+019-InreTargetCorpShareholderDerivativeActionLitigation.md,19346,2025,Other,0,2,2,0,0,0,0,S
+019-MarkeyvVerimatrixInc.md,11556,2009,9th Cir,0,0,1,0,1,0,0,G
+019-WilliamsCompaniesStockholderLitigation.md,179696,2021,Del Ch,0,0,4,1,1,0,1,G
+02-DolibervWest.md,23739,2026,Other,0,0,0,0,0,0,0,Non-ESG
+02-InreTeligentInc.md,29322,2026,SDNY,0,0,0,0,0,0,0,Non-ESG
+02-MakeUCaGoodNeighborvRegentsofUniversityofCalifornia.md,61499,2026,Other,1,1,0,0,0,0,0,E
+02-NewYorkvUnitedStatesDepartmentofCommerce.md,662312,2026,SDNY,3,3,1,1,0,0,1,E
+020-SabaCapitalMasterFundLTDvBlackrockESGCapitalAllocationTrust.md,20123,2026,SDNY,0,0,0,1,0,0,1,Non-ESG
+020-SmithvRecrionCorp.md,8979,2026,Other,0,0,1,0,1,0,0,G
+020-USvPuerto.md,101475,2010,5th Cir,0,0,0,0,0,0,0,Non-ESG
+021-InreKLXIncSecuritiesLitigation.md,41987,2017,Other,0,0,3,0,0,0,0,G
+021-TexasvSecuritiesandExchangeCommission.md,18841,2024,5th Cir,1,3,4,0,0,0,0,G
+022-StewartvMcDonald.md,42386,2026,Other,0,0,1,0,0,0,0,G
+022-WaldnervNatixisInvestmentManagersLP.md,174696,2025,Other,0,0,3,1,0,0,1,G
+023-DrennenvOlympusAmericaInc.md,30728,2022,Other,0,0,0,0,0,0,0,Non-ESG
+023-HugliSuttervPalmasHospitalityManagementLLC.md,39066,2025,Other,0,0,0,0,0,0,0,Non-ESG
+023-SabaCapitalMasterFundLtdvClearBridgeEnergyMidstreamOpportunityFu.md,40827,2026,SDNY,0,0,1,1,0,0,1,G
+023-SchentagvNebgen.md,105809,2018,SDNY,0,1,3,0,4,0,0,G
+024-BurnsvStratos.md,41633,2026,CD Cal,0,2,3,0,1,0,0,G
+024-CookeAndMosesLLCvQSS-EngineeredSystemsGroupLLC.md,74295,2026,2nd Cir,0,0,0,0,1,0,0,Non-ESG
+024-GillmorevIllinoisDeptofHumanServices.md,47379,2026,Other,1,0,0,0,0,0,0,E
+024-TheDetroitEdisonCovBurlingtonNorthernandSantaFeRyCo.md,28624,2026,2nd Cir,0,0,0,0,0,0,0,Non-ESG
+025-BeltonvNicholson.md,19333,2026,Other,0,0,0,0,0,0,0,Non-ESG
+025-BrainvExecu-SearchGroupLLC.md,29510,2024,SDNY,0,1,0,0,0,0,0,S
+025-BurnsvThuney.md,37120,2023,9th Cir,0,1,3,0,0,0,0,G
+026-AxosFinancialIncvReceptionPurchaserLLC.md,90207,2026,2nd Cir,0,0,1,0,0,0,0,G
+026-LoweryvMills.md,51684,2026,5th Cir,0,3,0,1,0,0,1,S
+026-MSGWRealEstateFundLLCvMountainLakesBorough.md,75737,2026,Other,0,1,0,0,0,0,0,S
+026-WalshvSearchExplorationInc.md,13395,2026,Other,0,0,0,0,0,0,0,Non-ESG
+027-CreativePowerSolutionsvEnergyServicesGroup.md,34375,2024,9th Cir,0,0,1,0,1,0,0,G
+027-KeipervVictorValleyTransitAuthority.md,29889,2016,CD Cal,0,0,0,0,0,0,0,Non-ESG
+027-MoyavBrown.md,8302,2026,Other,0,0,0,0,0,0,0,Non-ESG
+028-AxiomWorldwideIncvHTRDGroupHongKongLimited.md,10572,2011,Other,0,0,1,0,2,0,0,G
+028-ElnessSwensonGrahamArchitectsIncvRLJII-CAustinAirLP.md,19558,2026,Other,0,0,0,0,0,0,0,Non-ESG
+028-NoflesvStateFarmMutAutoInsCo.md,54649,2026,5th Cir,0,2,0,0,0,0,0,S
+029-MoorervVerizonCommunicationsInc.md,43050,2005,Other,0,1,0,0,0,0,0,S
+029-SabaCapitalMasterFundLtdvBlackRockMunicipalIncomeFundInc.md,37435,2026,SDNY,0,0,0,1,0,0,1,Non-ESG
+03-CityPensionFundforFirefightersandPoliceOfficersinCityofTampaBay.md,91280,2026,Other,0,1,2,1,0,0,1,G
+03-CityofHialeahEmployeesRetirementSystemvPelotonInteractiveInc.md,55024,2025,SDNY,0,1,2,1,0,0,1,G
+03-ESGWattsIncvIllinoisPollutionControlBd.md,31459,2026,Other,2,1,0,0,0,0,0,E
+03-InreKatrinaCanalBreachesConsolLitigation.md,141294,2026,9th Cir,1,0,0,0,0,0,0,E
+030-BichlervDEISystemsInc.md,37834,2009,Other,0,1,1,0,0,0,0,S
+030-EnergyPolicyAdvocatesvSecuritiesandExchangeCommission.md,44476,2026,DC Cir,2,0,1,1,0,0,1,E
+030-PerfectSurgicalTechniquesIncvOlympusAmericaInc.md,7383,2013,ND Cal,0,0,0,0,1,0,0,Non-ESG
+031-BoothvGober.md,39298,2026,Other,0,0,0,0,0,0,0,Non-ESG
+031-ComRentInternLLCvPalatini.md,37722,2013,Other,0,0,2,0,2,0,0,G
+031-WardvWest.md,11706,2026,Other,0,0,0,0,0,0,0,Non-ESG
+032-HambyvProfileProductsLLC.md,41536,2007,Del Ch,0,0,0,0,0,0,0,Non-ESG
+032-IllinoisEnvironmentalProtectionAgencyvIllinoisPollutionControlBd.md,49040,2026,Other,1,0,0,0,0,0,0,E
+032-Point12DiversifiedFundLPvTMCTheMetalsCompany.md,101017,2025,2nd Cir,1,1,2,1,1,0,1,G
+033-CountyofWestchestervUSDeptofHousingandUrbanDevelopment.md,129106,2026,SDNY,1,0,1,0,0,0,0,E
+033-GruganvBBCBrownBoveriInc.md,51809,2026,Other,0,1,0,0,0,0,0,S
+033-InreIntegraLifesciencesHoldingsCorporationSecuritiesLitigation.md,85271,2025,Other,0,1,1,0,1,0,0,S
+034-FlammvWest.md,10667,2026,Other,0,0,0,0,0,0,0,Non-ESG
+034-GarciavExecuSearchGroupLLC.md,22536,2019,SDNY,0,0,0,0,1,0,0,Non-ESG
+034-MastersonvMcCroskie.md,9417,2026,Other,0,0,1,0,1,0,0,G
+035-ESGWattsIncvPollutionControlBd.md,1029,2026,Other,1,0,0,0,0,0,0,E
+035-HodisonvWest.md,10729,2026,Other,0,0,0,0,0,0,0,Non-ESG
+035-InreExscientiaPLCSecuritiesLitigation.md,99866,2025,Other,0,2,6,1,0,0,1,G
+036-CityofDetroitPoliceandFireRetirementSystemonBehalfofNiSourceIn.md,119648,2022,Del Ch,0,1,2,1,0,0,1,G
+036-ESGWattsIncvTheIllinoisPollutionControlBd.md,813,2026,Other,1,0,0,0,0,0,0,E
+036-OHaraCorpvAutoNavMarineSystemsInc.md,33926,2020,Other,0,0,0,0,0,0,0,Non-ESG
+036-RasconvGober.md,17130,2026,Other,0,0,0,0,0,0,0,Non-ESG
+037-KumaranvNorthlandEnergyTradingLLC.md,83601,2025,SDNY,0,0,2,0,1,0,0,G
+037-NationalCenterforPublicPolicyResearchvSchultz.md,18169,2023,Del Ch,0,2,2,0,0,0,0,S
+037-UnitedStatesvJianyuHuang.md,22747,2013,Other,1,0,0,0,0,0,0,E
+038-AmericanZurichInsuranceCompanyvESGRepublicInc.md,21446,2025,Other,0,0,0,0,0,0,0,Non-ESG
+038-WorkCapitalLLCvAlphaOneCapitalPartnersLLC.md,19669,2020,Del Ch,0,0,1,0,0,0,0,G
+039-AonplcvInfiniteEquityInc.md,91602,2021,Other,0,0,3,0,0,0,0,G
+039-CookseyvCargillMeatSolutionsCorp.md,58409,2026,9th Cir,1,0,0,0,0,0,0,E
+039-SanAntonioFireandPolicePensionFundvDentsplySironaInc.md,64021,2026,SDNY,0,1,4,1,0,0,1,G
+039-TrytekvDerwinski.md,17909,2026,Other,0,0,0,0,0,0,0,Non-ESG
+04-FarnhamvCampariAmericaLLC.md,31958,2025,Other,0,0,4,1,0,0,1,G
+04-MeevBrown.md,12436,2026,Other,0,0,0,0,0,0,0,Non-ESG
+04-SaveOurAccessetcvWatershedConservationAuthority.md,69155,2026,Other,2,0,1,1,0,0,1,E
+04-UtahvMicone.md,58129,2026,ND Tex,1,1,5,0,0,0,0,G
+040-AdamsvMcDonough.md,15370,2022,Other,0,0,0,0,0,0,0,Non-ESG
+040-HarrisonvLocalOneInternationalUnionofElevatorConstructorsofNewY.md,53442,2025,2nd Cir,0,0,1,0,0,0,0,G
+040-STATEOFMISSOURIPlaintiffvSTARBUCKSCORPDefendant.md,101575,2026,2nd Cir,1,4,1,1,0,0,1,S
+040-WeberManufacturingTechnologiesIncvPlasanCarbonCompositesInc.md,42951,2016,Other,1,0,1,0,0,0,0,E
+041-CleftoftheRockFoundationvWilson.md,46943,2026,2nd Cir,0,1,1,0,0,0,0,S
+041-FalkvWest.md,13834,2026,Other,0,0,0,0,0,0,0,Non-ESG
+041-NationalCenterforPublicPolicyResearchvSecuritiesandExchangeCommi.md,41896,2026,5th Cir,1,2,1,0,0,0,0,S
+042-BucherandChristianConsultingIncvNovitexEnterpriseSolutionsInc.md,68717,2026,Other,0,1,1,0,0,0,0,S
+042-HooksvLockheedMartinSkunkWorks.md,13540,2001,CD Cal,0,0,0,0,0,0,0,Non-ESG
+042-RinconDelDiabloMunicipalWaterDistvSanDiegoCountyWaterAuthority.md,29345,2026,Other,1,0,0,0,0,0,0,E
+043-AllianceforFairBoardRecruitmentvSecuritiesandExchangeCommission.md,123931,2026,2nd Cir,3,3,4,0,0,0,0,G
+043-InreAttorneysWhoAreinViolationofJudiciaryLawSection468-a.md,128973,2006,SDNY,0,1,0,1,0,0,1,S
+043-JoeHandPromotionsIncvSantana.md,29376,2026,ND Cal,0,0,0,0,0,0,0,Non-ESG
+043-SimmonsvWest.md,5743,2026,Other,0,0,0,0,0,0,0,Non-ESG
+044-SkeensvWest.md,10961,2026,Other,0,0,0,0,0,0,0,Non-ESG
+045-BarnettvUS.md,281710,2026,Other,0,0,1,0,1,0,0,G
+045-EvansvZBNA.md,21958,2019,9th Cir,0,1,2,0,0,0,0,G
+045-WhaleCoIncvSheinTechnologyLLC.md,119295,2025,2nd Cir,0,1,1,0,5,0,0,S
+046-CBSCorpvUS.md,43550,2026,Other,0,0,2,0,0,0,0,G
+047-HandvWest.md,12070,2026,Other,0,0,0,0,0,0,0,Non-ESG
+047-McCollumvTargetCorporation.md,9284,2025,Other,0,1,1,0,0,0,0,S
+048-BattlevCorizonLLC.md,66050,2016,Other,0,1,0,0,0,0,0,S
+048-WilsonvDerwinski.md,17007,2026,Other,0,0,0,0,0,0,0,Non-ESG
+049-CohenvBrown.md,104399,2026,Other,0,0,0,0,0,0,0,Non-ESG
+049-CountyofCookvIllinoisLaborRelationsBdLocalPanel.md,47683,2026,Other,1,2,0,0,0,0,0,S
+049-LeevFisher.md,133131,2026,ND Cal,0,1,5,0,1,0,0,G
+05-BoyervWest.md,13736,2026,Other,0,0,0,0,0,0,0,Non-ESG
+05-DayvLSICorporation.md,13367,2013,Other,0,0,1,0,0,0,0,G
+05-McGawMedicalCenterofNorthwesternUniversityvDepartmentofEmployment.md,23936,2026,Other,1,1,0,0,0,0,0,E
+05-NationalAssnforAdvancementofColoredPeoplevMedicalCenterInc.md,70097,2026,2nd Cir,0,0,1,0,0,0,0,G
+05-StichtingPensioenfondsMetaalenTechniekvVerizonCommunicationsInc.md,66321,2026,Other,1,3,2,1,0,0,1,S
+050-EnvoIncvWalters.md,69003,2012,Del Ch,0,0,1,0,0,0,0,G
+050-GorianvSpilker.md,14289,2024,Other,0,0,0,0,0,0,0,Non-ESG
+050-InreTiktokIncMinorPrivacyLitigation.md,123948,2025,CD Cal,0,2,1,0,1,0,0,S
+050-SPayIncvStackMediaInc.md,58870,2021,Del Ch,0,0,2,0,0,0,0,G
+050-VolterraSemiconductorCorpvPrimarionInc.md,398163,2026,ND Cal,0,0,1,0,2,0,0,G
+051-InterfaithCenteronCorporateResponsibilityvUnitedStatesSecuritiesa.md,144494,2026,DC Cir,1,1,4,0,0,0,0,G
+052-StericycleIncvCarney.md,32320,2013,Other,0,0,1,0,0,0,0,G
+053-EvansvAutoClubProperty-CasualtyInsCo.md,19485,2020,Other,0,0,0,0,0,0,0,Non-ESG
+053-GMACvEliteSportsGroup.md,14306,2007,Other,0,0,0,0,0,0,0,Non-ESG
+053-MeansvAmeriquestMortgCo.md,88200,2012,Other,0,0,2,0,0,0,0,G
+054-BaivCMBExportInfrastructureInvestmentGroup48LP.md,98088,2025,9th Cir,0,0,2,0,0,0,0,G
+054-MartinOilMarketingLtdvKatzioris.md,26931,2026,Other,0,0,0,0,0,0,0,Non-ESG
+056-AgilysysIncvGordon.md,29391,2008,Other,0,0,1,0,0,0,0,G
+057-PettusvEsgrow.md,22632,2009,2nd Cir,0,0,0,0,0,0,0,Non-ESG
+058-StrasburgervBlackburneAndSonsRealtyCapitalCorp.md,31628,2020,CD Cal,0,0,3,0,0,0,0,G
+058-USThrillridesLLCvIntaminAmusementRidesIntCorpEst.md,105247,2026,Other,0,1,1,0,2,0,0,S
+059-BrightonTrusteesvTransamericaLifeInsuranceCompany.md,54407,2019,CD Cal,0,0,0,0,0,0,0,Non-ESG
+059-CohenvSudlerAndHennesseyLLC.md,12910,2010,SDNY,0,1,0,0,0,0,0,S
+059-EPAvPollutionControlBd.md,8127,2026,Other,1,0,0,0,0,0,0,E
+059-InreVaxartIncSecuritiesLitigation.md,7412,2022,ND Cal,0,0,1,0,0,0,0,G
+06-AmcorFlexiblesIncvIllinoisCommerceComn.md,42618,2015,Other,1,0,0,0,0,0,0,E
+06-CarrollvWest.md,26142,2026,Other,0,0,0,0,0,0,0,Non-ESG
+06-MayfieldvBrown.md,17325,2026,Other,0,0,0,0,0,0,0,Non-ESG
+06-UtahvSu.md,28757,2026,5th Cir,1,1,2,0,0,0,0,G
+060-GluckvHeclaMiningCo.md,44105,2024,SDNY,0,0,2,0,0,0,0,G
+060-MackvNicholson.md,28476,2026,Other,0,0,0,0,0,0,0,Non-ESG
+060-RetractableTechnologiesIncvUnitedStates.md,40369,2026,Other,0,1,0,0,0,0,0,S
+061-ChavezvKincaid.md,36355,2026,Other,1,0,0,0,2,0,0,E
+061-RobecoCapitalGrowthFundsSICAVRobecoGlobalConsumerTrendsvPeloto.md,58971,2026,SDNY,0,1,2,0,0,0,0,G
+061-UnitedStatesexrelMeiLingvCityofLosAngeles.md,169497,2018,CD Cal,3,1,0,0,0,0,0,E
+062-KatziorisvMartinOilMarketingLtd.md,12382,2026,Other,0,0,0,0,0,0,0,Non-ESG
+062-ShieldsvFederationInternationaledeNatation.md,119403,2019,ND Cal,0,0,1,0,2,0,0,G
+063-FintechLeadersFundLLCvCogut.md,35030,2025,SDNY,1,0,0,0,0,0,0,E
+063-HayesvBrown.md,34547,2026,Other,0,0,0,0,0,0,0,Non-ESG
+064-CollinsvilleCommunityUnitSchoolDistNo10vRegionalBdofSchoolTrus.md,67268,2026,Other,1,1,0,0,0,0,0,E
+065-WellsFargoBankNationalAssociationvTransamericaLifeInsuranceCompan.md,65442,2019,CD Cal,0,0,0,0,1,0,0,Non-ESG
+066-WestchestervUSDeptofHousingandUrbanDevelopment.md,35602,2026,SDNY,0,0,0,0,0,0,0,Non-ESG
+067-GeoMetWatchCorpvHall.md,16309,2019,Other,0,0,2,0,0,0,0,G
+067-ShaikvMurrayCountyCommissioners.md,18506,2024,Other,0,0,0,0,0,0,0,Non-ESG
+067-TijanivWest.md,8454,2026,Other,0,0,0,0,0,0,0,Non-ESG
+068-BelucaVenturesLLCvEinrideAktiebolag.md,43672,2026,ND Cal,0,0,2,0,0,0,0,G
+068-InreTM.md,15858,2024,Other,0,0,0,0,0,0,0,Non-ESG
+068-LayneChristensenCovBro-TechCorp.md,196393,2011,Other,1,2,1,0,3,0,0,S
+069-ClarkvWest.md,12329,2026,Other,0,0,0,0,0,0,0,Non-ESG
+069-RogersvNicholson.md,10174,2003,Other,0,0,0,0,0,0,0,Non-ESG
+07-BishopvBrown.md,17696,2026,Other,0,0,0,0,0,0,0,Non-ESG
+07-ConcernedAboutTridentvRumsfeld.md,61896,2026,DC Cir,1,0,0,0,0,0,0,E
+07-MakhloufvTailoredBrandsInc.md,43934,2017,SD Tex,0,1,2,1,0,0,1,G
+07-ZeichnervNordSecurityInc.md,35120,2024,ND Cal,1,0,0,0,1,0,0,E
+070-ChesapeakeBayFoundationIncvCommonwealthexrelVirginiaStateWaterC.md,75192,2026,Other,3,0,0,0,0,0,0,E
+070-HARLEYSVILLEINSURANCECOMPANYetalPlaintiffsvSKMINDUSTRIESINCetal.md,61434,2026,Other,0,1,2,0,4,0,0,G
+070-LiberatorvWest.md,11855,2026,Other,0,0,0,0,0,0,0,Non-ESG
+070-SabaCapitalMasterFundLtdvBlackRockESGCapitalAllocationTermTrust.md,54652,2024,SDNY,0,0,4,0,0,0,0,G
+071-CampbellvUnitedHealthcareInsuranceCompany.md,22881,2024,CD Cal,0,0,2,0,0,0,0,G
+071-MarshallvGalvanoni.md,18244,2019,Other,0,0,2,0,0,0,0,G
+071-VanMilligenvDepartmentofEmploymentSecurity.md,38160,2026,Other,1,1,0,0,0,0,0,E
+071-WallvWescomCentralCreditUnion.md,32882,2024,CD Cal,0,0,1,0,0,0,0,G
+072-InreFuboTVIncSecuritiesLitigation.md,65755,2023,SDNY,1,0,3,0,0,0,0,G
+072-LicensingDevelopmentGroupIncvFreedman.md,6910,2026,Other,0,0,1,0,0,0,0,G
+073-GreenpointMortgFundingIncvFamilyFirstMortgInc.md,24932,2026,Other,0,2,0,0,0,0,0,S
+073-InreMandel.md,104663,2011,2nd Cir,0,0,3,0,3,0,0,G
+073-SVBFinancialTrustvFederalDepositInsuranceCorporation.md,86824,2025,ND Cal,0,1,3,0,3,0,0,G
+073-WilsonvStateEmployeesRetirementSystemofIllinois.md,19258,2026,Other,1,1,0,0,0,0,0,E
+074-AuburnUniversityvInternationalBusinessMachinesCorp.md,20021,2026,Other,0,0,1,0,2,0,0,G
+074-HendersonvAxiamInc.md,243549,2026,Other,1,0,3,0,1,0,0,G
+075-BollingervGober.md,21870,2026,Other,0,0,0,0,0,0,0,Non-ESG
+076-UllimanSchutteConstIncvEmersonProcessManagementPowerAndWaterSol.md,30594,2026,DC Cir,0,1,0,0,0,0,0,S
+077-ApothioLLCvKernCounty.md,31025,2020,9th Cir,0,0,1,0,0,0,0,G
+077-InreGoldenHeavenGroupHoldingsLtdSecuritiesLitigation.md,36595,2025,CD Cal,0,0,1,0,0,0,0,G
+078-KramervGroundZeroCryptoLLC.md,34362,2023,Other,0,1,1,0,0,0,0,S
+079-McKeownvNicholson.md,16536,2026,Other,0,0,0,0,0,0,0,Non-ESG
+079-ODeenvWest.md,7691,2026,Other,0,0,0,0,0,0,0,Non-ESG
+079-WheatonFirefightersUnionLocal3706vIllinoisLaborRelationsBdState.md,29264,2015,Other,1,1,0,0,0,0,0,E
+08-BrittinghamvWest.md,15118,2026,Other,0,0,0,0,0,0,0,Non-ESG
+08-InreKatrinaCanalBreachesConsolidatedLitigation.md,328739,2026,9th Cir,3,0,0,0,0,0,0,E
+08-MondryvSpeedwaySuperamericaLLC.md,31562,2026,Other,0,0,0,0,0,0,0,Non-ESG
+080-ColdwellvRiteCorpEnvironmentalPropertySolutions.md,51500,2017,Other,0,1,1,0,0,0,0,S
+080-LiuvFidelityNationalTitleCompany.md,23287,2025,ND Cal,0,0,1,0,0,0,0,G
+081-InreCondemnationbyCityofCoatesville.md,234589,2002,Other,0,0,0,0,0,0,0,Non-ESG
+081-PalomaResourcesLLCvAxisInsuranceCompany.md,28847,2026,SD Tex,1,0,2,0,3,0,0,G
+081-VanderArkvHAFCorporation.md,48256,2023,CD Cal,0,0,2,0,2,0,0,G
+082-InreAccessCardiosystemsInc.md,60146,2026,SCOTUS,0,0,3,0,1,0,0,G
+082-InreGGIHoldingsLLC.md,181171,2026,ND Tex,0,0,1,0,3,0,0,G
+083-ArandavCaribbeanCruiseLineInc.md,61998,2026,5th Cir,0,1,1,0,0,0,0,S
+083-PeoplebyJamesvExxonMobilCorporation.md,122865,2026,2nd Cir,4,0,3,2,0,0,1,E
+084-NationalAssociationofManufacturersvUnitedStatesSecuritiesandExcha.md,43136,2026,5th Cir,0,0,3,0,0,0,0,G
+084-PersonsvGober.md,9024,2026,Other,0,0,0,0,0,0,0,Non-ESG
+085-JosephsHouseandShelterIncvCityofTroyNY.md,18374,2026,2nd Cir,0,0,0,0,0,0,0,Non-ESG
+085-UnitedStatesvCrescendoBioscienceInc.md,56604,2020,ND Cal,0,0,0,0,0,0,0,Non-ESG
+085-WrightvOshkoshCorporation.md,19714,2017,Other,0,0,0,0,0,0,0,Non-ESG
+086-UnitedStatesexrelDietervCityofMilwaukee.md,69968,2023,DC Cir,0,0,1,0,0,0,0,G
+087-ErhardtvWest.md,22903,2026,Other,0,0,0,0,1,0,0,Non-ESG
+088-GorssMotelsIncvIllenProductsLtd.md,44150,2019,2nd Cir,0,1,2,0,2,0,0,G
+088-InreTransunionDerivativeStockholderLitigation.md,83844,2024,Del Ch,0,1,2,0,0,0,0,G
+088-PoletvESGSecInc.md,38229,2026,Other,0,0,0,0,0,0,0,Non-ESG
+089-MartinLutherKingJrCountyvTurner.md,128360,2026,9th Cir,1,2,0,0,0,0,0,S
+089-PressPubCovMonroe.md,20583,2026,SDNY,0,1,0,0,1,0,0,S
+089-StonevNicholson.md,27898,2005,Other,0,0,0,0,0,0,0,Non-ESG
+09-JeffersonWilbertLeeSrvBrownJesseSecretaryofVeteransAffairs.md,22207,2026,Other,0,0,0,0,0,0,0,Non-ESG
+09-KellyvBrown.md,22603,2026,Other,0,0,0,0,0,0,0,Non-ESG
+09-LiveNationWorldwideIncvSecuraInsurance.md,16396,2026,Other,0,1,0,0,0,0,0,S
+09-PhysiciansforSocialResponsibility-LosAngelesvUSEPA.md,3790,2026,9th Cir,3,0,0,0,0,0,0,E
+09-SanchezvWalmartInc.md,55653,2026,Other,1,3,1,1,0,0,1,S
+092-BuhrkeFamilyRevocableTrustvUSBancorp.md,146799,2026,SDNY,0,1,4,0,0,0,0,G
+092-CityPensionFundforFirefightersandPoliceOfficersinCityofTampaBa.md,91280,2026,Other,0,1,2,1,0,0,1,G
+093-NationalFairHousingAlliancevCarson.md,177418,2026,DC Cir,2,1,1,0,0,0,0,E
+093-SpaffordvWest.md,10503,2026,Other,0,0,0,0,0,0,0,Non-ESG
+093-StClairIntellectualPropertyConsultantsIncvAcerInc.md,3508,2013,Other,0,0,1,0,1,0,0,G
+093-TwymanvDepartmentofEmploymentSecurity.md,27750,2017,Other,1,1,0,0,0,0,0,E
+095-EqualEmploymentOpportunityCommissionvEmployerSolutionsGroupLLC.md,8420,2021,Other,0,0,0,0,0,0,0,Non-ESG
+095-VanderArkTrusteeofLorraineJVanderArkTrustvVenableLLP.md,4216,2025,CD Cal,0,1,0,0,0,0,0,S
+096-EstesvStrategicResourceSolutionsCorp.md,13538,2004,5th Cir,0,0,0,0,0,0,0,Non-ESG
+096-HopeofKentuckyLLCvCameron.md,38084,2023,Other,5,3,0,2,1,0,1,E
+096-WasteManagementofIllinoisIncvIllinoisPollutionControlBd.md,19532,2026,Other,1,0,0,0,0,0,0,E
+097-StencilvUnitedStates.md,14071,2024,Other,0,0,0,0,0,0,0,Non-ESG
+098-AcecoValvesLLCvNeal.md,16733,2023,Other,0,0,0,0,0,0,0,Non-ESG
+099-KoskiniemivJennings.md,100640,2025,9th Cir,1,0,1,0,2,0,0,E
+099-PanhandleEasternPipeLineCovIllinoisEPA.md,27850,2000,Other,3,0,0,0,0,0,0,E
+10-GarlandvChildrensPlaceInc.md,43576,2024,Other,0,0,2,0,0,0,0,G
+10-MoreauvBrown.md,31513,2026,Other,0,0,0,0,0,0,0,Non-ESG
+10-SanFranciscansforLivableNeighborhoodsvCityandCountyofSanFrancisc.md,98628,2026,Other,2,1,1,1,0,0,1,E
+10-TibblevEdisonIntern.md,20674,2015,CD Cal,0,0,2,0,0,0,0,G
+10-WojcikonbehalfofOmegaHealthcareInvestorsIncvOmegaHealthcareInves.md,35150,2024,Other,0,1,3,1,0,0,1,G
+100-FinBrandPositioningLLCvTake2DoughProductionsInc.md,21755,2010,Other,0,1,0,0,2,0,0,S
+100-InreHorvath.md,41151,2026,9th Cir,0,1,0,0,0,0,0,S
+100-TalipotESGInvestmentsLLCvBulltickFinancialAdvisoryServicesLLC.md,65812,2025,Other,0,0,2,0,0,0,0,G
+11-FiremensRetirementSystemofStLouisonbehalfofMarriottInternational.md,89701,2021,Del Ch,0,0,3,0,0,0,0,G
+11-FormanvTriHealthInc.md,33566,2022,9th Cir,0,0,2,0,0,0,0,G
+11-KahnertvKotick.md,49824,2022,CD Cal,0,1,4,0,0,0,0,G
+11-LathanvBrinegar.md,64059,2026,9th Cir,1,0,0,1,0,0,1,E
+12-BurnsvDepartmentofEmploymentSec.md,43129,2026,Other,1,0,0,0,0,0,0,E
+12-FifthThirdBancorpvDudenhoeffer.md,49638,2014,9th Cir,0,0,3,0,0,0,0,G
+12-Koppelv4987Corp.md,50986,2001,SDNY,0,0,2,0,0,0,0,G
+12-LosAngelesWaterkeepervStateWaterResourcesControlBd.md,160378,2026,Other,2,0,0,0,0,0,0,E
+13-WileyvESGSecurityInc.md,24966,2026,Other,0,0,0,0,0,0,0,Non-ESG
+14-FederationofHillsideandCanyonAssociationsvCityofLosAngeles.md,40719,2026,Other,0,0,0,0,0,0,0,Non-ESG
+14-InreON24IncSecuritiesLitigation.md,12745,2026,ND Cal,0,0,1,0,0,0,0,G
+15-BrownvElementarySchoolDistrict159.md,27330,2019,Other,0,0,1,0,1,0,0,G
+15-NelsonvUSCitizenshipandImmigrationServices.md,44864,2022,Other,0,0,2,0,1,0,0,G
+15-WilliamsburgAroundtheBridgeBlockAssnvGiuliani.md,30353,2026,Other,2,0,0,0,0,0,0,E
+16-AmesvNielsen.md,39368,2018,DC Cir,0,1,0,0,0,0,0,S
+16-ChengvActivisionBlizzardInc.md,56335,2022,CD Cal,0,1,4,0,1,0,0,G
+16-NewYorkCityCoalitiontoEndLeadPoisoningIncvVallone.md,28050,2003,Other,0,0,0,0,0,0,0,Non-ESG
+17-CityofDavisvColeman.md,73701,2026,9th Cir,1,0,1,0,0,0,0,E
+17-HarwellvWest.md,13649,2026,Other,0,0,0,0,0,0,0,Non-ESG
+17-PerezvVezerIndustrialProfessionalsInc.md,37154,2011,Other,0,1,0,0,1,0,0,S
+17-SmithvCommonSpiritHealth.md,33389,2022,Other,0,0,3,0,1,0,0,G
+18-CaliforniaNativePlantSocietyvCityofSantaCruz.md,125923,2009,Other,0,1,1,0,0,0,0,S
+18-InreHawaiianElectricIndustriesIncStockholderDerivativeLitigation.md,40969,2026,ND Cal,1,0,3,1,0,0,1,G
+18-InterfaithCenteronCorporateResponsibilityvUnitedStatesSecuritiesan.md,144494,2026,DC Cir,1,1,4,0,0,0,0,G
+18-VeazeyvBaker.md,18945,2026,Other,1,1,0,0,0,0,0,E
+19-EstateofDownsvWebster.md,13695,2026,Other,1,0,0,0,0,0,0,E
+19-InreTargetCorpShareholderClassActionLitigation.md,19291,2025,Other,0,2,2,0,0,0,0,S
+19-KilakilaOHaleakalavUniversityofHawaiiandDavidLassner.md,75345,2016,9th Cir,1,0,1,1,0,0,1,E
+19-TheodorevPurecycleTechnologiesInc.md,58381,2023,Other,0,0,2,1,1,0,1,G
+20-MemingervIllinoisDepartmentofHumanServices.md,11610,2024,Other,1,0,0,0,0,0,0,E
+20-MorrisAndDicksonCoIncvJonesBrothersCoInc.md,55616,2026,2nd Cir,1,1,1,0,0,0,0,E
+20-ZaryckivBrown.md,39040,2026,Other,0,0,0,0,0,0,0,Non-ESG
+21-MallozzivInnovativeIndustrialPropertiesInc.md,59042,2023,Other,0,0,2,1,0,0,1,G
+21-TellabsIncvMakorIssuesAndRightsLtd.md,71285,2007,2nd Cir,0,0,1,0,0,0,0,G
+23-PeopleexrelRaoulvLincolnLtd.md,49022,2021,Other,2,0,0,0,0,0,0,E
+24-AmerenTransmissionCompanyofIllinoisvHutchings.md,43007,2018,Other,1,0,0,0,0,0,0,E
+24-InreMetaMaterialsIncSecuritiesLitigation.md,114283,2023,9th Cir,0,0,4,1,1,0,1,G
+25-PapishvBoardofCuratorsofUniversityofMissouri.md,23974,2026,SCOTUS,0,0,0,0,0,0,0,Non-ESG
+26-CampaignforQualityEducationvStateofCalifornia.md,159410,2016,Other,0,0,0,0,0,0,0,Non-ESG
+26-PeopleexrelRyanvMcHenryShoresWaterCo.md,29052,2026,Other,1,0,0,0,0,0,0,E
+27-HandalvInnovativeIndustrialPropertiesInc.md,76694,2025,Del Ch,0,0,3,1,0,0,1,G
+27-MollvTelesectorResourcesGroupInc.md,148631,2026,2nd Cir,1,2,0,0,0,0,0,S
+27-RandolphCountyBdofEducvAdams.md,60639,2026,Other,0,0,0,0,0,0,0,Non-ESG
+28-HowellvMillersvilleUniversityofPennsylvania.md,102762,2026,Other,0,1,1,0,0,0,0,S
+28-LenkvMonolithicPowerSystemsIncorporated.md,87752,2015,9th Cir,1,3,2,0,0,0,0,S
+29-EvolutionServicesGroupLLCvCBLRealtySE.md,34805,2024,Other,0,0,0,0,0,0,0,Non-ESG
+29-RapoportvAsiaElectronicsHoldingCoInc.md,35969,2026,SDNY,0,0,1,0,0,0,0,G
+29-SizemorevPrincipi.md,44799,2026,Other,0,0,0,0,0,0,0,Non-ESG
+30-EmeraldCasinoIncvIllinoisGamingBd.md,12550,2026,Other,1,0,0,0,0,0,0,E
+30-IdeogenicsLLCvUnitedStates.md,142547,2026,Other,0,0,0,0,0,0,0,Non-ESG
+30-ParkervGKNNorthAmericaServicesInc.md,22448,2022,Other,0,0,2,0,0,0,0,G
+31-IllinoisEPAvJerseySanitationCorp.md,32303,2026,Other,2,0,0,0,0,0,0,E
+31-StatevRiddle.md,36395,2026,SCOTUS,0,0,0,0,0,0,0,Non-ESG
+32-ConcernedCitizensofTimberchasevMorrisConstructionCo.md,38559,2026,Other,0,0,1,0,0,0,0,G
+32-ShafervIllinoisWorkersCompensationComn.md,49100,2011,Other,1,0,0,0,0,0,0,E
+33-LocksmithvChippenhamHosp.md,20653,2004,Other,0,0,0,0,0,0,0,Non-ESG
+33-SwepiLPvMoraCountyNM.md,484303,2026,9th Cir,3,1,2,1,2,0,1,E
+34-DeCarloAndDollIncvOrangeEconomicDevelopmentCorp.md,37049,2006,Other,0,0,0,0,0,0,0,Non-ESG
+34-HarbourAntibodiesBVvTeneobioInc.md,34504,2022,Other,0,0,1,0,1,0,0,G
+34-PennsylvaniaAssociationofRuralandSmallSchoolsvRidge.md,364360,2026,Other,1,0,0,0,0,0,0,E
+35-ChathamHoldingsVILLCvHermida.md,39826,2024,Del Ch,0,0,1,0,0,0,0,G
+35-MyersvHasara.md,26257,2000,Other,0,0,0,0,0,0,0,Non-ESG
+35-SangamonCountySheriffsDeptvStateHumanRightsComn.md,40694,2026,Other,1,1,0,0,0,0,0,E
+36-BurkevOxfordHouseofOregonChapterV.md,76214,2004,Other,0,0,0,0,0,0,0,Non-ESG
+36-DizogliovBrown.md,17426,2026,Other,0,0,0,0,0,0,0,Non-ESG
+37-ThorntonvKrogerCompany.md,34631,2023,Other,0,0,0,0,0,0,0,Non-ESG
+38-CommunityLandfillCovIllinoisPollutionControlBd.md,54823,2011,Other,2,0,0,0,0,0,0,E
+38-HarvardClimateJusticeCoalitionvPresidentandFellowsofHarvardColleg.md,38747,2026,Other,3,0,0,0,0,0,0,E
+39-MalabedvNorthSlopeBorough.md,57179,2026,9th Cir,0,3,0,0,0,0,0,S
+39-SimeonevWaltDisneyCompany.md,65905,2026,Del Ch,1,2,2,0,0,0,0,S
+40-DrummondCompanyIncvCollingsworth.md,66943,2024,Other,0,1,0,1,0,0,1,S
+40-SgaggiovWeiser.md,32214,2021,2nd Cir,0,0,0,0,0,0,0,Non-ESG
+41-McRitchievZuckerberg.md,207414,2026,2nd Cir,3,1,3,1,2,0,1,E
+41-WashingtonvUSDepartmentofCommerce.md,57783,2025,9th Cir,5,2,0,1,0,0,1,E
+42-CommunityLandfillCovPollutionControlBd.md,18552,2002,Other,1,0,0,0,0,0,0,E
+42-OxfordHouse-CvCityofStLouis.md,110582,2026,Other,1,0,0,0,0,0,0,E
+43-TownshipofHaverfordvUpperDarbyZoningHearingBoard.md,39999,2024,Other,0,0,0,1,0,0,1,Non-ESG
+44-LimcacovWynn.md,85177,2021,CD Cal,0,2,0,1,0,0,1,S
+44-LoneyvScurr.md,46397,2026,5th Cir,0,0,0,0,0,0,0,Non-ESG
+44-ToyalAmericaIncvIllinoisPollutionControlBd.md,37051,2012,Other,3,0,1,0,0,0,0,E
+46-HawaiiexrelTorricervLibertyDialysis-HawaiiLLC.md,88992,2026,9th Cir,0,0,0,0,1,0,0,Non-ESG
+46-WexfordScienceandTechnologyLLCvCityofPittsburghZoningBoardofAdj.md,32109,2026,Other,3,0,0,1,0,0,1,E
+47-CityofMorrisvCommunityLandfillCo.md,29225,2011,Other,1,0,0,0,0,0,0,E
+47-LosAngelesCityEmployeesRetirementSystemvSanford.md,167093,2026,Del Ch,0,1,3,0,0,0,0,G
+48-ColevPrincipi.md,15535,2003,Other,0,0,0,0,0,0,0,Non-ESG
+48-TrindadevSunnovaEnergyInternationalInc.md,48022,2025,SD Tex,0,1,4,1,0,0,1,G
+49-ShepherdvGannondale.md,72627,2014,Other,0,2,0,0,0,0,0,S
+50-BrownriggvDerwinski.md,14125,2026,Other,0,0,0,0,0,0,0,Non-ESG
+50-GrayvImperialPacificInternationalCNMILLC.md,92428,2023,9th Cir,0,2,0,0,0,0,0,S
+50-PauleyvKelly.md,167615,2026,Other,1,1,0,0,0,0,0,E
+51-GramsvAutozoneInc.md,12930,2026,Other,1,0,0,0,0,0,0,E
+52-ChicagoTeachersUnionLocal1AmericanFederationofTeachersAFL-CIOvIl.md,48830,2003,Other,1,0,0,0,0,0,0,E
+52-JeffersonvSouthworth.md,53186,2026,Other,0,0,0,0,0,0,0,Non-ESG
+53-InreAbbottLaboratoriesInfantFormulaShareholderDerivativeLitigation.md,114980,2022,9th Cir,0,3,4,1,0,0,1,G
+53-JonesvMatkin.md,49723,2022,5th Cir,0,0,1,0,0,0,0,G
+53-ViacomIncvUS.md,62599,2026,Other,0,0,1,0,0,0,0,G
+54-VogueTyreandRubberCovOfficeofStateFireMarshalofState.md,22684,2026,Other,1,1,0,0,0,0,0,E
+54-ZykanvWarsawCommunitySchoolCorp.md,39628,2026,Other,0,0,0,0,0,0,0,Non-ESG
+55-HallvBoardofEducofChicagoPublicSchoolDist.md,23158,2011,Other,1,0,0,0,0,0,0,E
+55-SkeenvState.md,96032,2026,Other,0,0,0,0,0,0,0,Non-ESG
+55-StateexrelKobachvHarper.md,115984,2025,Other,0,0,0,0,1,0,0,Non-ESG
+56-SorentoParentsCommitteeofTenvRegionalBoardofSchoolTrusteesforBo.md,13160,2024,Other,1,0,0,0,0,0,0,E
+57-HoovervWestVirginiaBdofMedicine.md,40285,2026,Other,1,0,0,0,0,0,0,E
+57-InreInterestofLC.md,31915,2026,Other,0,0,0,0,0,0,0,Non-ESG
+58-BoardofEducofIndianPrairieCommunityUnitSchoolDistNo204vRegiona.md,15581,2026,Other,1,0,0,0,0,0,0,E
+58-CityofNewarkCityofNewark-DivSewerandWatervWestMilfordTownship.md,147752,2024,Other,1,1,1,1,0,0,1,E
+58-KobrineLLCvMetzger.md,66842,2026,Other,0,0,0,0,0,0,0,Non-ESG
+59-CookCountySheriffsEnforcementAssnvCountyofCook.md,14645,2026,Other,1,1,0,0,0,0,0,E
+60-EstateofMorrissettevCommissionerofInternalRevenue.md,186351,2021,5th Cir,0,0,1,1,0,0,1,G
+60-Martnez-NegrnvCocaColaPuertoRicoBottlers.md,108805,2016,Other,0,2,0,0,0,0,0,S
+60-PeopleexrelMadiganvIllinoisCommerceComn.md,48923,2015,Other,3,0,0,0,0,0,0,E
+61-SWEPILPvMoraCountyNM.md,224611,2014,DC Cir,2,0,1,1,1,0,1,E
+62-DiscreteWirelessIncvColemanTechnologiesInc.md,48865,2006,Other,0,0,0,0,0,0,0,Non-ESG
+63-InreNarjisLLC.md,14794,2023,Other,0,0,0,0,0,0,0,Non-ESG
+63-MorganvBakerHughesIncorporated.md,71297,2026,Other,0,2,0,0,1,0,0,S
+64-ConfederatedTribesofGrandRondeCommunityofOregonvJewell.md,131098,2026,9th Cir,3,0,0,0,0,0,0,E
+65-DelawareansforEducationalOpportunityvCarney.md,251512,2018,Del Ch,0,0,1,0,0,0,0,G
+65-VeazeyvDoherty.md,14470,2026,Other,1,1,0,0,0,0,0,E
+66-BarronvIllinoisHumanRightsCommission.md,12387,2023,Other,1,1,0,0,0,0,0,E
+66-WilliamPennSchoolDistrictvPennsylvaniaDepartmentofEducation.md,317599,2026,Other,0,1,1,0,0,0,0,S
+67-CostellovCityofBrigantine.md,102766,2001,Other,0,0,1,0,0,0,0,G
+67-DyjakvHou.md,16299,2024,Other,1,1,0,0,0,0,0,E
+68-EnSourceInvestmentsLLCvWillis.md,75930,2019,9th Cir,0,0,2,0,0,0,0,G
+68-StatevBorchardt.md,151349,2026,2nd Cir,0,0,0,0,0,0,0,Non-ESG
+69-Cruz-GuzmanvState.md,101011,2026,Other,0,1,0,0,0,0,0,S
+69-JacksonvState.md,14700,2019,Other,1,1,0,0,0,0,0,E
+70-CampaignforFiscalEquityvState.md,308590,2001,Other,1,2,0,0,0,0,0,S
+70-SardinvPeople.md,14886,2017,Other,1,0,0,0,0,0,0,E
+71-HillvFairfaxCountySchoolBd.md,23135,2011,Other,0,0,1,0,0,0,0,G
+72-OneElevenFoodAndLiquorIncvCityofChicago.md,30461,2021,Other,1,2,0,0,0,0,0,S
+74-BoardofSuprsofPrinceWilliamCountyvParsons.md,16435,2026,Other,0,0,0,0,0,0,0,Non-ESG
+76-AGEdwardsIncvSecretaryofStateDeptofSecuritiesofStateofIll.md,30350,2026,Other,1,0,0,0,0,0,0,E
+77-BradfordvUniversityCivilServiceMeritBoardofUniversityCivilService.md,15645,2025,Other,1,1,0,0,0,0,0,E
+78-WaltersvDepartmentofLabor.md,28397,2026,Other,1,0,0,0,0,0,0,E
+79-BeggsvBoardofEducofMurphysboroCommunityUnitSchoolDistNo186.md,54991,2015,Other,1,0,0,0,0,0,0,E
+81-JonesvCahokiaUnitSchoolDistNo187.md,11626,2026,Other,1,0,0,0,0,0,0,E
+83-CignavIllinoisHumanRightsCommission.md,45785,2020,Other,1,1,0,0,0,0,0,E
+84-CartervHumanRightsCommission.md,31604,2024,Other,1,1,0,0,0,0,0,E
+85-ThomasvDiener.md,36593,2026,Other,1,0,0,0,0,0,0,E
+86-MHANYManagementIncvCountyofNassau.md,193715,2026,SDNY,0,0,0,0,0,0,0,Non-ESG
+88-UltschvIllinoisMunRetirementFund.md,76519,2026,Other,1,1,0,0,1,0,0,E
+90-PeopleexrelMadiganvJTEinoderInc.md,75739,2013,Other,2,0,1,0,0,0,0,E
+91-PeopleexrelMadiganvPetcoPetroleumCorp.md,63605,2026,Other,1,0,1,0,0,0,0,E
+92-InreSolarEdgeTechnologiesIncSecuritiesLitigation.md,86540,2024,SDNY,2,0,2,2,0,0,1,E
+95-EdwardsvPekinMemorialHospital.md,34564,2023,Other,1,0,1,0,0,0,0,E
