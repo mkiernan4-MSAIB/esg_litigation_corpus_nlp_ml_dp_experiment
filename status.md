@@ -10,8 +10,8 @@
 Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06). Scripts 07–08 written and ready for Colab GPU execution. Versioned reproducibility package (per-step zips + Jupyter notebook) committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
 
 **GitHub repo:** https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment  
-**Latest commit:** 8f8a4e7 — per-step zips refactor  
-**PAT status:** Deleted by user April 23, 2026. Generate new PAT before next push.
+**Latest commit:** aa54704 — versioned filenames + SHA-256 integrity hashes  
+**Auth method:** SSH (ed25519). Remote set to `git@github.com:mkiernan4-MSAIB/...`. No PATs required. Push with `git push origin master`.
 
 **REMAINING EXECUTION:**
 1. Run `07_esg_longformer.py` in Colab T4/A100 — produces Longformer checkpoints + CLS embeddings.
