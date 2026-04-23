@@ -1,0 +1,24 @@
+{
+  "step": "02_noise_filtering",
+  "description": "Keyword-signal noise filter retaining only ESG-relevant cases from the 918 deduplicated files.",
+  "script": "02_non_esg_filter_noise.py",
+  "input_files": 918,
+  "retained": 444,
+  "excluded": 474,
+  "manifest": "02_manifest.json",
+  "decisions": [
+    "ESG override threshold: 3 keyword hits",
+    "474 excluded to esg_corpus_excluded/"
+  ],
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-23T15:20:48.939931+00:00",
+  "rows": 918,
+  "columns": [
+    "decision",
+    "filename",
+    "noise_hits",
+    "esg_hits"
+  ],
+  "sha256_csv": "d67fbb4edff9a39c4c6d1d9c13fda2ae55c68e91da098774744dc54491be5a59"
+}

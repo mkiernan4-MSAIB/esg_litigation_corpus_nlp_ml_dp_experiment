@@ -1,0 +1,39 @@
+{
+  "step": "06_ml_baseline",
+  "description": "TF-IDF + Random Forest + XGBoost with class-weighted loss. 5-fold stratified CV.",
+  "script": "06_esg_ml_baseline.py",
+  "n_cases": 444,
+  "tfidf_vocab": 20000,
+  "random_forest": {
+    "macro_f1": 0.6078,
+    "mcc": 0.5721
+  },
+  "xgboost": {
+    "macro_f1": 0.8253,
+    "mcc": 0.8015
+  },
+  "frozen_feature_matrix": "feature_matrix_v1_frozen.csv",
+  "frozen_sha256": "a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e",
+  "manifest": "06_manifest.json",
+  "shap_plots": [
+    "shap_rf_beeswarm.png",
+    "shap_rf_waterfall_E.png",
+    "shap_xgb_beeswarm.png"
+  ],
+  "decisions": [
+    "XGBoost is authoritative ML baseline (Macro-F1 0.8253)",
+    "SHAP TreeExplainer beeswarm + waterfall plots"
+  ],
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-23T15:20:48.939931+00:00",
+  "rows": 444,
+  "columns": [
+    "filename",
+    "token_count",
+    "label",
+    "rf_pred",
+    "xgb_pred"
+  ],
+  "sha256_csv": "590b017fe1c73bd33cac1f52fc7373d225c21fd50a9c386ac074568636eae5a9"
+}

@@ -1,31 +1,42 @@
 {
   "script": "09_create_reproducibility_package.py",
-  "generated_at": "2026-04-23T14:59:24.964911+00:00",
-  "snapshots_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\snapshots",
-  "package_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\reproducibility_package",
-  "step_zips_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\step_zips",
-  "step_zips": {
-    "snapshot_01_deduplication": "0.0 MB",
-    "snapshot_02_noise_filtering": "0.0 MB",
-    "snapshot_03_corpus_stats": "0.0 MB",
-    "snapshot_04_label_construction": "0.0 MB",
-    "snapshot_05_text_cleaning": "7.9 MB",
-    "snapshot_06_ml_baseline": "0.2 MB"
+  "version": "v1",
+  "date_stamp": "4232026",
+  "version_suffix": "_v1_4232026",
+  "generated_at": "2026-04-23T15:20:48.939931+00:00",
+  "frozen_feature_matrix": {
+    "file": "feature_matrix_v1_frozen.csv",
+    "path": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\feature_matrix_v1_frozen.csv",
+    "sha256": "a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e"
   },
-  "total_zip_mb": 8.1,
-  "snapshots": [
-    "snapshot_01_deduplication.csv",
-    "snapshot_01_deduplication.json",
-    "snapshot_02_noise_filtering.csv",
-    "snapshot_02_noise_filtering.json",
-    "snapshot_03_corpus_stats.csv",
-    "snapshot_03_corpus_stats.json",
-    "snapshot_04_label_construction.csv",
-    "snapshot_04_label_construction.json",
-    "snapshot_05_text_cleaning.csv",
-    "snapshot_05_text_cleaning.json",
-    "snapshot_06_ml_baseline.csv",
-    "snapshot_06_ml_baseline.json"
-  ],
-  "notebook": "ESG_Litigation_Classifier_Reproducibility.ipynb"
+  "step_zips": {
+    "snapshot_01_deduplication_v1_4232026": {
+      "size_mb": 0.0,
+      "sha256": "c5ef25ef192e4345aaa54b5f9d8640bdb4638b1882a6d12985908a7b331b6007"
+    },
+    "snapshot_02_noise_filtering_v1_4232026": {
+      "size_mb": 0.0,
+      "sha256": "d7125c7506aa61dd12f3c198bece09b1a3a37526bb9527245a09238de913aa3f"
+    },
+    "snapshot_03_corpus_stats_v1_4232026": {
+      "size_mb": 0.0,
+      "sha256": "bca04d621046d93047c388e8b97b5b81bf86b5e400487c8ba332cf78bce89254"
+    },
+    "snapshot_04_label_construction_v1_4232026": {
+      "size_mb": 0.0,
+      "sha256": "96c854347dfff67d1d9e6cb3292cdb7f342a6d92d3c5935a96ee43f7a9e17fc4"
+    },
+    "snapshot_05_text_cleaning_v1_4232026": {
+      "size_mb": 7.9,
+      "sha256": "437384906a9e79b0829039ebb148457fb1c8c2ad6370e3015af395541197828f"
+    },
+    "snapshot_06_ml_baseline_v1_4232026": {
+      "size_mb": 8.1,
+      "sha256": "e312b0175e438a0b26aacf68d12a75c62cb8084b2cc1fe985652de68c5f0b0d5"
+    }
+  },
+  "total_zip_mb": 16.0,
+  "snapshots_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\snapshots",
+  "notebook": "ESG_Litigation_Classifier_Reproducibility_v1_4232026.ipynb",
+  "integrity_note": "SHA-256 hashes in step_zips are the outer hashes of each zip file. SHA-256 in frozen_feature_matrix anchors the training dataset to an immutable state. Each zip also contains an internal reproducibility_manifest that hashes every file within it."
 }

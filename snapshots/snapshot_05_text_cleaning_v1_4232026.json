@@ -1,0 +1,32 @@
+{
+  "step": "05_text_cleaning",
+  "description": "[OUTCOME] leakage masking and token audit of 444 cases.",
+  "script": "05_esg_text_clean.py",
+  "n_cases": 444,
+  "total_outcome_masks": 3028,
+  "files_with_masks": 422,
+  "pct_exceed_512": 99.1,
+  "mean_token_count": 8824.0,
+  "frozen_feature_matrix": "feature_matrix_v1_frozen.csv",
+  "frozen_sha256": "a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e",
+  "manifest": "05_manifest.json",
+  "decisions": [
+    "14 outcome terms masked as [OUTCOME]",
+    "99.1% exceed 512 tokens",
+    "Mean 8,824 tokens/case -> Longformer required"
+  ],
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-23T15:20:48.939931+00:00",
+  "rows": 444,
+  "columns": [
+    "filename",
+    "label",
+    "is_sustainability",
+    "is_greenwash",
+    "token_count",
+    "exceeds_512",
+    "outcome_mask_count"
+  ],
+  "sha256_csv": "aaa9f821b49cb1c5cb007453f381340ac473e2758d99becfec887db4a76c1c6e"
+}

@@ -1,0 +1,23 @@
+{
+  "step": "01_deduplication",
+  "description": "Cosine similarity deduplication (threshold > 0.95) of 1,282 raw Westlaw .md files.",
+  "script": "01_esg_deduplicate.py",
+  "input_files": 1282,
+  "canonical_cases": 918,
+  "duplicates": 364,
+  "manifest": "01_manifest.json",
+  "decisions": [
+    "Cosine similarity threshold: 0.95",
+    "364 duplicates quarantined in esg_corpus_dupes/"
+  ],
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-23T15:20:48.939931+00:00",
+  "rows": 1282,
+  "columns": [
+    "filename",
+    "status",
+    "corpus"
+  ],
+  "sha256_csv": "ae7f5a54d8ae4b8e93dc23b6b609cd4c568e7c8732a20fa55a5e4814461e2af3"
+}

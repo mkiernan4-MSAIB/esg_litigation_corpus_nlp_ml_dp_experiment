@@ -32,6 +32,15 @@
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
+# Versioning — applied to all snapshot files, zips, and frozen datasets
+# Format: _v{VERSION}_{MDDYYYY}
+# Increment VERSION when pipeline decisions change (new labels, re-cleaning, etc.)
+# ---------------------------------------------------------------------------
+PACKAGE_VERSION = "v1"
+PACKAGE_DATE    = "4232026"   # April 23, 2026 — MDDYYYY, matches user zip naming
+VERSION_SUFFIX  = f"_{PACKAGE_VERSION}_{PACKAGE_DATE}"
+
+# ---------------------------------------------------------------------------
 # Project Root
 # Windows path  : C:\GoogleDriveProfiles\Michael_Fordham\Shared drives\ESG DL Project\esg_project
 # Google Drive  : /content/drive/Shared Drives/ESG DL Project/esg_project

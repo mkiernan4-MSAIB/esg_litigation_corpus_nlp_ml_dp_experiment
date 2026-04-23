@@ -1,0 +1,37 @@
+{
+  "step": "04_label_construction",
+  "description": "argmax(E, S, G pillar scores); tiebreaker G > E > S; zero-signal -> Non-ESG.",
+  "script": "04_esg_label_construction.py",
+  "n_cases": 444,
+  "class_distribution": {
+    "G": 171,
+    "Non-ESG": 134,
+    "E": 92,
+    "S": 47
+  },
+  "is_sustainability_count": 64,
+  "is_greenwash_count": 1,
+  "manifest": "04_manifest.json",
+  "decisions": [
+    "argmax(E,S,G)",
+    "Tiebreaker G > E > S",
+    "Zero-signal -> Non-ESG",
+    "Sustainability = binary cross-cutting modifier"
+  ],
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-23T15:20:48.939931+00:00",
+  "rows": 444,
+  "columns": [
+    "filename",
+    "label",
+    "is_sustainability",
+    "is_greenwash",
+    "E_score",
+    "S_score",
+    "G_score",
+    "sus_score",
+    "signal_strength"
+  ],
+  "sha256_csv": "97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd"
+}
