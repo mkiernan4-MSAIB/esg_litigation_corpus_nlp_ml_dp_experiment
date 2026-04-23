@@ -63,6 +63,8 @@ Scripts 06–08 written and ready for Colab execution. Slide narrative prose for
 
 **Step 8c — Execute 08_esg_xai_visualizations.py** (after 07 completes). Produces ROC curves, word clouds, SHAP, t-SNE, attention heatmaps.
 
+**~~Step 8d — Reproducibility package + version control~~** ✓ Complete April 23, 2026. 6 versioned snapshot pairs (CSV + JSON) in `snapshots/`. Jupyter notebook, 3 SHAP charts, all scripts, manifests, and full data packaged in `ESG_Litigation_Classifier_reproducibility_v1.zip` (16.1 MB). Git repo initialized, 46 files committed (hash c1238c4). `ESG_corpus_cleaned_v1.csv` and `ml_baseline_predictions.csv` excluded from git (24MB each) but included in zip. Awaiting GitHub remote repo URL to push.
+
 **Step 9 — Revise all 9 PowerPoint slides.** Use `esg_slide_narrative.md` as source. Narrative prose, no bullets, inline citations, methodology table + narrative, descriptive-to-predictive pipeline explicit, expanded limitations. Framing: surfacing ESG legal issues from case law. Produce in Claude.ai using pptx skill.
 
 ---

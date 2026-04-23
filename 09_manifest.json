@@ -1,10 +1,18 @@
 {
   "script": "09_create_reproducibility_package.py",
-  "generated_at": "2026-04-23T14:25:08.335025+00:00",
+  "generated_at": "2026-04-23T14:59:24.964911+00:00",
   "snapshots_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\snapshots",
   "package_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\reproducibility_package",
-  "zip_path": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\ESG_Litigation_Classifier_reproducibility_v1.zip",
-  "zip_size_mb": 16.1,
+  "step_zips_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\step_zips",
+  "step_zips": {
+    "snapshot_01_deduplication": "0.0 MB",
+    "snapshot_02_noise_filtering": "0.0 MB",
+    "snapshot_03_corpus_stats": "0.0 MB",
+    "snapshot_04_label_construction": "0.0 MB",
+    "snapshot_05_text_cleaning": "7.9 MB",
+    "snapshot_06_ml_baseline": "0.2 MB"
+  },
+  "total_zip_mb": 8.1,
   "snapshots": [
     "snapshot_01_deduplication.csv",
     "snapshot_01_deduplication.json",

@@ -456,30 +456,106 @@ for f in ["config.py", "CLAUDE.md", "status.md"]:
 print(f"  scripts: {len(list((PKG_DIR / 'scripts').iterdir()))} files")
 
 # ===========================================================================
-# BUILD ZIP
+# PER-STEP ZIPS — one zip per completed pipeline step
 # ===========================================================================
-print(f"\n--- Building zip: {ZIP_PATH.name} ---")
+print("\n--- Building per-step zips ---")
 
-# Include full CSVs in zip (even though excluded from git)
-extra_for_zip = [
-    (CLEANED_CSV,                           "data/ESG_corpus_cleaned_v1.csv"),
-    (ML_DIR / "ml_baseline_predictions.csv","data/ml_baseline_predictions.csv"),
-    (ESG_CORPUS_PILLAR_METADATA_CSV,        "data/esg_corpus_pillar_metadata.csv"),
-    (ROOT / "esg_corpus_filtered" / "esg_corpus_stats.txt", "data/esg_corpus_stats.txt"),
+ZIPS_DIR = ROOT / "step_zips"
+ZIPS_DIR.mkdir(exist_ok=True)
+
+# Notebook path (included in step 06 zip as the synthesis artifact)
+nb_path = PKG_DIR / "ESG_Litigation_Classifier_Reproducibility.ipynb"
+
+step_zip_defs = [
+    {
+        "slug": "snapshot_01_deduplication",
+        "files": [
+            (SNAPSHOTS_DIR / "snapshot_01_deduplication.csv",  "snapshot_01_deduplication.csv"),
+            (SNAPSHOTS_DIR / "snapshot_01_deduplication.json", "snapshot_01_deduplication.json"),
+            (ROOT / "01_manifest.json",                        "01_manifest.json"),
+            (ROOT / "01_esg_deduplicate.py",                   "01_esg_deduplicate.py"),
+            (ROOT / "config.py",                               "config.py"),
+        ],
+    },
+    {
+        "slug": "snapshot_02_noise_filtering",
+        "files": [
+            (SNAPSHOTS_DIR / "snapshot_02_noise_filtering.csv",  "snapshot_02_noise_filtering.csv"),
+            (SNAPSHOTS_DIR / "snapshot_02_noise_filtering.json", "snapshot_02_noise_filtering.json"),
+            (ROOT / "02_manifest.json",                          "02_manifest.json"),
+            (ROOT / "02_non_esg_filter_noise.py",                "02_non_esg_filter_noise.py"),
+            (ESG_FILTER_LOG,                                     "esg_filter_log.csv"),
+            (ROOT / "config.py",                                 "config.py"),
+        ],
+    },
+    {
+        "slug": "snapshot_03_corpus_stats",
+        "files": [
+            (SNAPSHOTS_DIR / "snapshot_03_corpus_stats.csv",  "snapshot_03_corpus_stats.csv"),
+            (SNAPSHOTS_DIR / "snapshot_03_corpus_stats.json", "snapshot_03_corpus_stats.json"),
+            (ROOT / "03_manifest.json",                       "03_manifest.json"),
+            (ROOT / "03_esg_corpus_stats.py",                 "03_esg_corpus_stats.py"),
+            (ESG_CORPUS_PILLAR_METADATA_CSV,                  "esg_corpus_pillar_metadata.csv"),
+            (ROOT / "esg_corpus_filtered" / "esg_corpus_stats.txt", "esg_corpus_stats.txt"),
+            (ROOT / "config.py",                              "config.py"),
+        ],
+    },
+    {
+        "slug": "snapshot_04_label_construction",
+        "files": [
+            (SNAPSHOTS_DIR / "snapshot_04_label_construction.csv",  "snapshot_04_label_construction.csv"),
+            (SNAPSHOTS_DIR / "snapshot_04_label_construction.json", "snapshot_04_label_construction.json"),
+            (ROOT / "04_manifest.json",                             "04_manifest.json"),
+            (ROOT / "04_esg_label_construction.py",                 "04_esg_label_construction.py"),
+            (ESG_CORPUS_LABELS_CSV,                                 "esg_corpus_labels.csv"),
+            (ROOT / "config.py",                                    "config.py"),
+        ],
+    },
+    {
+        "slug": "snapshot_05_text_cleaning",
+        "files": [
+            (SNAPSHOTS_DIR / "snapshot_05_text_cleaning.csv",  "snapshot_05_text_cleaning.csv"),
+            (SNAPSHOTS_DIR / "snapshot_05_text_cleaning.json", "snapshot_05_text_cleaning.json"),
+            (ROOT / "05_manifest.json",                        "05_manifest.json"),
+            (ROOT / "05_esg_text_clean.py",                    "05_esg_text_clean.py"),
+            (CLEANED_CSV,                                      "ESG_corpus_cleaned_v1.csv"),
+            (ROOT / "config.py",                               "config.py"),
+        ],
+    },
+    {
+        "slug": "snapshot_06_ml_baseline",
+        "files": [
+            (SNAPSHOTS_DIR / "snapshot_06_ml_baseline.csv",  "snapshot_06_ml_baseline.csv"),
+            (SNAPSHOTS_DIR / "snapshot_06_ml_baseline.json", "snapshot_06_ml_baseline.json"),
+            (ROOT / "06_manifest.json",                      "06_manifest.json"),
+            (ROOT / "06_esg_ml_baseline.py",                 "06_esg_ml_baseline.py"),
+            (ML_DIR / "ml_baseline_metrics.json",            "ml_baseline_metrics.json"),
+            (ML_DIR / "shap_rf_beeswarm.png",                "charts/shap_rf_beeswarm.png"),
+            (ML_DIR / "shap_rf_waterfall_E.png",             "charts/shap_rf_waterfall_E.png"),
+            (ML_DIR / "shap_xgb_beeswarm.png",              "charts/shap_xgb_beeswarm.png"),
+            (nb_path,                                         "ESG_Litigation_Classifier_Reproducibility.ipynb"),
+            (ROOT / "config.py",                              "config.py"),
+            (ROOT / "CLAUDE.md",                              "CLAUDE.md"),
+            (ROOT / "status.md",                              "status.md"),
+        ],
+    },
 ]
 
-with zipfile.ZipFile(ZIP_PATH, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as zf:
-    for file in sorted(PKG_DIR.rglob("*")):
-        if file.is_file():
-            arcname = file.relative_to(PKG_DIR)
-            zf.write(file, arcname)
-    for src, arcname in extra_for_zip:
-        if src.exists():
-            zf.write(src, arcname)
-            print(f"  + {arcname}")
+zip_sizes = {}
+for step in step_zip_defs:
+    out_path = ZIPS_DIR / f"{step['slug']}.zip"
+    with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as zf:
+        for src, arcname in step["files"]:
+            if Path(src).exists():
+                zf.write(src, arcname)
+    mb = out_path.stat().st_size / 1e6
+    zip_sizes[step["slug"]] = round(mb, 1)
+    print(f"  {step['slug']}.zip  ({mb:.1f} MB)")
 
-zip_mb = ZIP_PATH.stat().st_size / 1e6
-print(f"  Zip size: {zip_mb:.1f} MB -> {ZIP_PATH.name}")
+total_mb = sum(zip_sizes.values())
+print(f"  Total: {total_mb:.1f} MB across {len(step_zip_defs)} zips")
+
+zip_mb = total_mb  # used in manifest below
 
 # ===========================================================================
 # MANIFEST FOR THIS SCRIPT
@@ -489,8 +565,9 @@ manifest09 = {
     "generated_at":    NOW,
     "snapshots_dir":   str(SNAPSHOTS_DIR),
     "package_dir":     str(PKG_DIR),
-    "zip_path":        str(ZIP_PATH),
-    "zip_size_mb":     round(zip_mb, 1),
+    "step_zips_dir":   str(ZIPS_DIR),
+    "step_zips":       {k: f"{v} MB" for k, v in zip_sizes.items()},
+    "total_zip_mb":    round(zip_mb, 1),
     "snapshots": [f.name for f in sorted(SNAPSHOTS_DIR.iterdir()) if f.suffix in {".csv",".json"}],
     "notebook":        "ESG_Litigation_Classifier_Reproducibility.ipynb",
 }
@@ -499,6 +576,8 @@ with open(ROOT / "09_manifest.json", "w") as f:
 
 print(f"\nManifest written: 09_manifest.json")
 print("\nReproducibility package complete.")
-print(f"  snapshots/               — {len(list(SNAPSHOTS_DIR.iterdir()))} files")
-print(f"  reproducibility_package/ — {len(list(PKG_DIR.rglob('*')))} files")
-print(f"  {ZIP_PATH.name}")
+print(f"  snapshots/    - {len(list(SNAPSHOTS_DIR.iterdir()))} files")
+print(f"  step_zips/    - {len(step_zip_defs)} zips ({total_mb:.1f} MB total)")
+for slug, mb in zip_sizes.items():
+    print(f"    {slug}.zip  ({mb} MB)")
+print(f"  Notebook: ESG_Litigation_Classifier_Reproducibility.ipynb")

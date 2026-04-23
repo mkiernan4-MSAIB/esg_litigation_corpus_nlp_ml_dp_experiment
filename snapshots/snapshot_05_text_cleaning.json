@@ -17,7 +17,7 @@
     "99.1% of cases exceed 512-token BERT limit",
     "Average 8,824 tokens/case \u2192 Longformer architecture required"
   ],
-  "generated_at": "2026-04-23T14:25:08.335025+00:00",
+  "generated_at": "2026-04-23T14:59:24.964911+00:00",
   "rows": 444,
   "columns": [
     "filename",

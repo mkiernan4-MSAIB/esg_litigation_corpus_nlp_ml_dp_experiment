@@ -24,7 +24,7 @@
     "XGBoost is authoritative ML baseline (Macro-F1 0.8253)",
     "SHAP TreeExplainer \u2014 beeswarm + waterfall plots"
   ],
-  "generated_at": "2026-04-23T14:25:08.335025+00:00",
+  "generated_at": "2026-04-23T14:59:24.964911+00:00",
   "rows": 444,
   "columns": [
     "filename",
