@@ -109,7 +109,7 @@ Any case with no nexus to environmental conduct, treatment of people, governance
 
 **Class imbalance (April 22, 2026):** S at 10.6%, greenwash at 1 case. SMOTE or class-weighted loss required. 2 greenwash cases lost as false negatives in noise filter — address in limitations slide.
 
-**Reproducibility package (April 23, 2026):** `snapshots/` — 6 versioned snapshot CSV+JSON pairs (deduplication, noise_filtering, corpus_stats, label_construction, text_cleaning, ml_baseline). `ESG_Litigation_Classifier_reproducibility_v1.zip` — 39 files, 16.1 MB, includes full CSVs, Jupyter notebook, all scripts, manifests, 3 SHAP PNGs. Git repo initialized; 46 files committed (c1238c4). GitHub remote pending — profile: https://github.com/mkiernan4-MSAIB.
+**Reproducibility package (April 23, 2026):** `snapshots/` — 6 versioned snapshot CSV+JSON pairs named by step (snapshot_01_deduplication through snapshot_06_ml_baseline). `step_zips/` — 6 per-step zips, each self-contained with snapshot CSV+JSON, manifest, script, and step-specific outputs (SHAP PNGs in step 06, full cleaned CSV in step 05). Jupyter notebook in step 06 zip. Git initialized; 2 commits pushed to GitHub. PAT deleted April 23, 2026 — generate new one before next push. GitHub: https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment
 
 **ML baseline results (April 23, 2026 — executed):** Random Forest Macro-F1 = 0.6078 / MCC = 0.5721 (S recall 0.13 — RF underperforms on sparse high-dimensional features with minority class). XGBoost Macro-F1 = 0.8253 / MCC = 0.8015 (S recall 0.60). XGBoost is the authoritative ML baseline. SHAP plots saved to `esg_corpus_outputs/ml_baseline/`. `06_manifest.json` written.
 

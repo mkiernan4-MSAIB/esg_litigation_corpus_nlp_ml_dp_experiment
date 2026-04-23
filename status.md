@@ -5,15 +5,18 @@
 
 ## 1. Current Task Status
 
-**Session April 23, 2026 — MODELING + VISUALIZATION SCRIPTS WRITTEN. SLIDE NARRATIVE DRAFTED.**
+**Session April 23, 2026 — ML BASELINE EXECUTED. REPRODUCIBILITY PACKAGE COMPLETE. VERSION CONTROL ACTIVE.**
 
-Scripts 06–08 written and ready for Colab execution. Slide narrative prose for Methodology and Limitations slides drafted in `esg_slide_narrative.md`. PowerPoint revision (9 slides) still pending — narrative content is ready; deck production in Claude.ai is the next step.
+Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06). Scripts 07–08 written and ready for Colab GPU execution. Versioned reproducibility package (per-step zips + Jupyter notebook) committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
 
-**EXECUTION ORDER:**
-1. Run `06_esg_ml_baseline.py` locally or in Colab (CPU-viable). Produces RF + XGBoost + SHAP outputs.
-2. Run `07_esg_longformer.py` in Colab with GPU runtime (T4/A100 required). Produces Longformer checkpoints + embeddings.
-3. Run `08_esg_xai_visualizations.py` after both above complete. Produces all 5 visualization outputs.
-4. Produce PowerPoint deck in Claude.ai using `esg_slide_narrative.md` as content source.
+**GitHub repo:** https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment  
+**Latest commit:** 8f8a4e7 — per-step zips refactor  
+**PAT status:** Deleted by user April 23, 2026. Generate new PAT before next push.
+
+**REMAINING EXECUTION:**
+1. Run `07_esg_longformer.py` in Colab T4/A100 — produces Longformer checkpoints + CLS embeddings.
+2. Run `08_esg_xai_visualizations.py` after 07 completes — produces ROC, word clouds, SHAP, t-SNE, attention heatmaps.
+3. Produce PowerPoint deck in Claude.ai using `esg_slide_narrative.md` as content source.
 
 ---
 
@@ -63,7 +66,7 @@ Scripts 06–08 written and ready for Colab execution. Slide narrative prose for
 
 **Step 8c — Execute 08_esg_xai_visualizations.py** (after 07 completes). Produces ROC curves, word clouds, SHAP, t-SNE, attention heatmaps.
 
-**~~Step 8d — Reproducibility package + version control~~** ✓ Complete April 23, 2026. 6 versioned snapshot pairs (CSV + JSON) in `snapshots/`. Jupyter notebook, 3 SHAP charts, all scripts, manifests, and full data packaged in `ESG_Litigation_Classifier_reproducibility_v1.zip` (16.1 MB). Git repo initialized, 46 files committed (hash c1238c4). `ESG_corpus_cleaned_v1.csv` and `ml_baseline_predictions.csv` excluded from git (24MB each) but included in zip. Awaiting GitHub remote repo URL to push.
+**~~Step 8d — Reproducibility package + version control~~** ✓ Complete April 23, 2026. 6 versioned snapshot pairs (CSV + JSON) in `snapshots/`. 6 per-step zips in `step_zips/` (each contains snapshot CSV + JSON + manifest + script + step outputs). Jupyter notebook included in `snapshot_06_ml_baseline.zip`. Git repo initialized; 2 commits pushed to GitHub (c1238c4, 8f8a4e7). `ESG_corpus_cleaned_v1.csv` git-excluded (24MB) but included in `snapshot_05_text_cleaning.zip`. PAT deleted — generate new one before next push.
 
 **Step 9 — Revise all 9 PowerPoint slides.** Use `esg_slide_narrative.md` as source. Narrative prose, no bullets, inline citations, methodology table + narrative, descriptive-to-predictive pipeline explicit, expanded limitations. Framing: surfacing ESG legal issues from case law. Produce in Claude.ai using pptx skill.
 
@@ -90,11 +93,17 @@ Every revised slide must be written in narrative prose sentences — no bullet p
 | `06_esg_ml_baseline.py` | Project root | TF-IDF + RF + XGBoost + SHAP → `esg_corpus_outputs/ml_baseline/` |
 | `07_esg_longformer.py` | Project root | Longformer fine-tuning (Colab GPU) → `esg_corpus_outputs/longformer/` |
 | `08_esg_xai_visualizations.py` | Project root | ROC, word clouds, SHAP, t-SNE, attention → `esg_corpus_outputs/visualizations/` |
+| `09_create_reproducibility_package.py` | Project root | Generates snapshots/, step_zips/, Jupyter notebook |
 | `esg_slide_narrative.md` | Project root | Methodology + Limitations slide prose with 16 inline citations |
+| `esg_prompts.md` | Project root | Canonical prompt list for all pipeline phases |
 | `esg_corpus_outputs/esg_corpus_labels.csv` | Outputs | Authoritative label source |
-| `esg_corpus_outputs/ESG_corpus_cleaned_v1.csv` | Outputs | Authoritative model input |
+| `esg_corpus_outputs/ESG_corpus_cleaned_v1.csv` | Outputs | Authoritative model input (24MB — git-excluded, in step_05 zip) |
+| `esg_corpus_outputs/ml_baseline/` | Outputs | RF + XGBoost models (.pkl), SHAP PNGs, metrics JSON, predictions CSV |
 | `esg_corpus_filtered/esg_corpus_pillar_metadata.csv` | Filtered | Per-file pillar scores + flags |
 | `esg_corpus_filtered/esg_corpus_stats.txt` | Filtered | Descriptive statistics report |
+| `snapshots/` | Project root | 6 × (CSV + JSON) versioned step snapshots |
+| `step_zips/` | Project root | 6 per-step reproducibility zips |
+| `ESG_Litigation_Classifier_Reproducibility.ipynb` | `reproducibility_package/` | Full pipeline Jupyter notebook |
 | Corpus zip | Re-upload to Claude.ai if needed | `001-BroadcastMusicIncvTexBorderManagementInc.zip` |
 | Assignment | Re-upload to Claude.ai if needed | `Spring_2026_DL_Team_Project_Proposal.docx` |
 | Marked-up proposal | Re-upload to Claude.ai if needed | `ESGProjeectMarkedUp.pdf` |
@@ -121,3 +130,12 @@ Every revised slide must be written in narrative prose sentences — no bullet p
 | Step 3 manifest | `03_manifest.json` |
 | Step 4 manifest | `04_manifest.json` |
 | Step 5 manifest | `05_manifest.json` |
+| Step 6 manifest | `06_manifest.json` |
+| Step 9 manifest | `09_manifest.json` |
+| Deduplication snapshot | `snapshots/snapshot_01_deduplication.{csv,json}` |
+| Noise filtering snapshot | `snapshots/snapshot_02_noise_filtering.{csv,json}` |
+| Corpus stats snapshot | `snapshots/snapshot_03_corpus_stats.{csv,json}` |
+| Label construction snapshot | `snapshots/snapshot_04_label_construction.{csv,json}` |
+| Text cleaning snapshot | `snapshots/snapshot_05_text_cleaning.{csv,json}` |
+| ML baseline snapshot | `snapshots/snapshot_06_ml_baseline.{csv,json}` |
+| GitHub repo | `https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment` |
