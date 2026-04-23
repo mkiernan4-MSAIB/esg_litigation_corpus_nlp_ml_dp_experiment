@@ -14,7 +14,7 @@ Save the output as `ESG_corpus_cleaned_v1.csv`."
 
 ---
 
-### ** Prompt 2: Machine Learning Baseline & Interpretability (Status: OPEN)**
+### ** Prompt 2: Machine Learning Baseline & Interpretability (Status: COMPLETE — April 23, 2026)**
 
 "I require Python code for a Google Colab environment to establish a Machine Learning baseline using the authoritative `ESG_corpus_cleaned_v1.csv` and `esg_corpus_labels.csv`. 
 
@@ -27,9 +27,11 @@ The pipeline must:
 
 **Technical Note:** Classical ML is required as a baseline because the unique corpus size (444 cases) is below the threshold where Deep Learning consistently outperforms shallow models.
 
+**Execution results (April 23, 2026):** `06_esg_ml_baseline.py` executed locally. RF Macro-F1 = 0.6078 / MCC = 0.5721. XGBoost Macro-F1 = 0.8253 / MCC = 0.8015. XGBoost is authoritative ML baseline. 3 SHAP plots saved to `esg_corpus_outputs/ml_baseline/`.
+
 ---
 
-### ** Prompt 3: Longformer Fine-Tuning & Regularization (Status: OPEN)**
+### ** Prompt 3: Longformer Fine-Tuning & Regularization (Status: SCRIPT WRITTEN — pending Colab GPU execution)**
 
 "I need to fine-tune a **Longformer** model to categorize ESG legal issues, as the recent token audit confirmed that **99.1% of my 444 cases exceed the 512-token limit**, with an average length of **8,824 tokens per case**.
 
@@ -42,9 +44,11 @@ The training code must:
 
 **Technical Note:** The shift from RoBERTa to Longformer is a direct consequence of the finding that standard transformer limits are unworkable for this specific litigation corpus.
 
+**Script:** `07_esg_longformer.py` written April 23, 2026. Run in Colab T4/A100 runtime. Produces checkpoints in `esg_corpus_outputs/longformer/` and CLS embeddings for Prompt 4 visualizations.
+
 ---
 
-### ** Prompt 4: Advanced XAI & Visualizations (Status: OPEN)**
+### ** Prompt 4: Advanced XAI & Visualizations (Status: SCRIPT WRITTEN — pending Prompt 3 execution)**
 
 "Please write plotting code for **Phase 7: Results Synthesis** using the results from the ML and Longformer models. 
 
@@ -57,9 +61,11 @@ The script must produce:
 
 **Technical Note:** This phase validates that the model is learning substantive legal theories (surfacing issues) rather than memorizing case-specific noise.
 
+**Script:** `08_esg_xai_visualizations.py` written April 23, 2026. Run after `07_esg_longformer.py` completes. Gracefully skips Longformer-dependent plots if embeddings not yet available. Outputs to `esg_corpus_outputs/visualizations/`.
+
 ---
 
-### ** Prompt 5: Narrative Proposal Revision (Status: OPEN)**
+### ** Prompt 5: Narrative Proposal Revision (Status: COMPLETE — April 23, 2026)**
 
 "Draft the narrative prose for the **Methodology and Limitations slides** of the project proposal, adhering to the **no-bullet rule**. 
 
@@ -70,3 +76,5 @@ The prose must:
 4.  **Citations:** Include inline numbered citations for taxonomy anchors like **UN Brundtland (1987)** and **SEC Rule 10b-5**."
 
 **Technical Note:** This prompt addresses specific instructor feedback from the initial proposal regarding formatting and the need for connected narrative sections.
+
+**Output (April 23, 2026):** `esg_slide_narrative.md` — full narrative prose for Methodology (table + two paragraphs) and Scope/Limitations slides. 16 inline citations. No bullets. Ready for PowerPoint production in Claude.ai using the pptx skill.
