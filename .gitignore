@@ -53,6 +53,30 @@ Thumbs.db
 .idea/
 
 # -------------------------------------------------------------------
-# Temporary and intermediate outputs NOT part of the canonical record
+# Trained model files and plot outputs (tracked by SHA-256 in zips/manifests)
 # -------------------------------------------------------------------
+*.pkl
+esg_corpus_outputs/ml_baseline/*.png
+esg_corpus_outputs/descriptive_analysis/*.png
 esg_corpus_outputs/visualizations/
+
+# -------------------------------------------------------------------
+# Reproducibility zips (large binary — SHA-256 recorded in manifests)
+# -------------------------------------------------------------------
+step_zips/
+reproducibility_package/
+
+# -------------------------------------------------------------------
+# Session and runtime artifacts
+# -------------------------------------------------------------------
+07_progress.json
+.claude/
+
+# -------------------------------------------------------------------
+# Non-project files in working directory
+# -------------------------------------------------------------------
+Claude Documents for Report/
+Fordham Branding/
+NotebookLMManifestUpdate*.md
+SHAPBeeswarmandWaterfallTreeExplainerPlotsExplained.gdoc
+SHAPBeeswarmandWaterfallTreeExplainerPlotsExplained.md

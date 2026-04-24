@@ -1,15 +1,290 @@
 {
   "script": "06_esg_ml_baseline.py",
+  "version": "v1",
+  "date_stamp": "4232026",
   "n_cases": 444,
+  "split": {
+    "train": 310,
+    "val": 67,
+    "test": 67
+  },
   "tfidf_vocab_size": 20000,
-  "rf_macro_f1": 0.6078,
-  "rf_mcc": 0.5721,
-  "xgb_macro_f1": 0.8253,
-  "xgb_mcc": 0.8015,
+  "models": [
+    "majority_class",
+    "bow_logistic_regression",
+    "logistic_regression",
+    "complement_naive_bayes",
+    "random_forest",
+    "xgboost"
+  ],
+  "metrics": {
+    "majority_class": {
+      "macro_f1": 0.1398,
+      "mcc": 0.0,
+      "auc_macro_ovr": 0.5,
+      "per_class": {
+        "Environmental": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 14
+        },
+        "Governance": {
+          "precision": 0.3881,
+          "recall": 1.0,
+          "f1": 0.5591,
+          "support": 26
+        },
+        "Non-ESG": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 20
+        },
+        "Social": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 7
+        }
+      }
+    },
+    "bow_logistic_regression": {
+      "macro_f1": 0.7529,
+      "mcc": 0.6635,
+      "auc_macro_ovr": 0.9135,
+      "per_class": {
+        "Environmental": {
+          "precision": 0.6111,
+          "recall": 0.7857,
+          "f1": 0.6875,
+          "support": 14
+        },
+        "Governance": {
+          "precision": 0.7241,
+          "recall": 0.8077,
+          "f1": 0.7636,
+          "support": 26
+        },
+        "Non-ESG": {
+          "precision": 0.9375,
+          "recall": 0.75,
+          "f1": 0.8333,
+          "support": 20
+        },
+        "Social": {
+          "precision": 1.0,
+          "recall": 0.5714,
+          "f1": 0.7273,
+          "support": 7
+        }
+      }
+    },
+    "logistic_regression": {
+      "macro_f1": 0.7409,
+      "mcc": 0.6666,
+      "auc_macro_ovr": 0.9056,
+      "per_class": {
+        "Environmental": {
+          "precision": 0.6111,
+          "recall": 0.7857,
+          "f1": 0.6875,
+          "support": 14
+        },
+        "Governance": {
+          "precision": 0.7333,
+          "recall": 0.8462,
+          "f1": 0.7857,
+          "support": 26
+        },
+        "Non-ESG": {
+          "precision": 1.0,
+          "recall": 0.7,
+          "f1": 0.8235,
+          "support": 20
+        },
+        "Social": {
+          "precision": 0.8,
+          "recall": 0.5714,
+          "f1": 0.6667,
+          "support": 7
+        }
+      }
+    },
+    "complement_naive_bayes": {
+      "macro_f1": 0.6117,
+      "mcc": 0.5806,
+      "auc_macro_ovr": 0.8759,
+      "per_class": {
+        "Environmental": {
+          "precision": 0.6111,
+          "recall": 0.7857,
+          "f1": 0.6875,
+          "support": 14
+        },
+        "Governance": {
+          "precision": 0.6286,
+          "recall": 0.8462,
+          "f1": 0.7213,
+          "support": 26
+        },
+        "Non-ESG": {
+          "precision": 1.0,
+          "recall": 0.65,
+          "f1": 0.7879,
+          "support": 20
+        },
+        "Social": {
+          "precision": 1.0,
+          "recall": 0.1429,
+          "f1": 0.25,
+          "support": 7
+        }
+      }
+    },
+    "random_forest": {
+      "macro_f1": 0.676,
+      "mcc": 0.686,
+      "auc_macro_ovr": 0.9287,
+      "per_class": {
+        "Environmental": {
+          "precision": 0.8462,
+          "recall": 0.7857,
+          "f1": 0.8148,
+          "support": 14
+        },
+        "Governance": {
+          "precision": 0.6667,
+          "recall": 0.9231,
+          "f1": 0.7742,
+          "support": 26
+        },
+        "Non-ESG": {
+          "precision": 0.9412,
+          "recall": 0.8,
+          "f1": 0.8649,
+          "support": 20
+        },
+        "Social": {
+          "precision": 1.0,
+          "recall": 0.1429,
+          "f1": 0.25,
+          "support": 7
+        }
+      }
+    },
+    "xgboost": {
+      "macro_f1": 0.7684,
+      "mcc": 0.7467,
+      "auc_macro_ovr": 0.9663,
+      "per_class": {
+        "Environmental": {
+          "precision": 0.75,
+          "recall": 0.8571,
+          "f1": 0.8,
+          "support": 14
+        },
+        "Governance": {
+          "precision": 0.84,
+          "recall": 0.8077,
+          "f1": 0.8235,
+          "support": 26
+        },
+        "Non-ESG": {
+          "precision": 0.8636,
+          "recall": 0.95,
+          "f1": 0.9048,
+          "support": 20
+        },
+        "Social": {
+          "precision": 0.75,
+          "recall": 0.4286,
+          "f1": 0.5455,
+          "support": 7
+        }
+      }
+    }
+  },
+  "best_model": "xgboost",
   "outputs_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\ml_baseline",
-  "shap_plots": [
+  "plots": [
+    "confusion_bow_lr.png",
+    "confusion_cnb.png",
+    "confusion_lr.png",
+    "confusion_majority_class.png",
+    "confusion_rf.png",
+    "confusion_xgb.png",
+    "feature_importance_rf.png",
+    "feature_importance_xgb.png",
+    "roc_E_all_models.png",
+    "roc_G_all_models.png",
+    "roc_NonESG_all_models.png",
+    "roc_S_all_models.png",
+    "roc_curves_all_models.png",
+    "shap_rf_bar_global.png",
     "shap_rf_beeswarm.png",
+    "shap_rf_beeswarm_E.png",
+    "shap_rf_beeswarm_G.png",
+    "shap_rf_beeswarm_NonESG.png",
+    "shap_rf_beeswarm_S.png",
     "shap_rf_waterfall_E.png",
-    "shap_xgb_beeswarm.png"
+    "shap_xgb_bar_global.png",
+    "shap_xgb_beeswarm.png",
+    "shap_xgb_beeswarm_E.png",
+    "shap_xgb_beeswarm_G.png",
+    "shap_xgb_beeswarm_NonESG.png",
+    "shap_xgb_beeswarm_S.png",
+    "shap_xgb_waterfall_E.png"
+  ],
+  "sha256": {
+    "confusion_bow_lr.png": "45b065921216a9864d8d2d261866b3800bfac5f3d46b897b56a676c4fa3a8d86",
+    "confusion_cnb.png": "2ee285985b194ab02bcb590e7eb0a541dc2b9ed8ee48d833b43814100b0cffe7",
+    "confusion_lr.png": "399a60371f8d6d6ff9c238e3031bdd10fe88d0387a1ddbb5d8e4c2c33c2694a3",
+    "confusion_majority_class.png": "8de51e0265fa5ebef7a9544552429265adae3b71e1608fed14ccdfd60134f879",
+    "confusion_rf.png": "f942803910bd3dfbdb225081d6496cc9616c6feca11be560477f4e1c1d3f991d",
+    "confusion_xgb.png": "aaee0eba3ad87ef20d81b3e19bb141f260cb246f905762143f0dffc58d747a86",
+    "feature_importance_rf.png": "9dd42fccb5ff8ccc72def34286e46ae02947c649db37fbd0910e7ab968483751",
+    "feature_importance_xgb.png": "247671f859a5787652a8163c1ef61edb5bdebd8742c9f1884f5d122e2bcf2e88",
+    "roc_E_all_models.png": "55bce84c175b0b3896e4134bb6db2bfdc2f18339ed32b143b3002adf89d68d2f",
+    "roc_G_all_models.png": "77d3e5db78df19a1208a2ffa761d50720c5544ef81905ba2610861e77abd900a",
+    "roc_NonESG_all_models.png": "9235c3ef2df23303b0a6ef1e6c0ebcfe6f9b2c4107b8b6caaf83f33eb7a806df",
+    "roc_S_all_models.png": "3d0dc45c36741afb9d0fdbf45cda7d1968023d045dd4c9f45925129509215320",
+    "roc_curves_all_models.png": "36730c1db5c376f73cc8c0bc6ee90f80db42bba39670184b4fee60585ac28455",
+    "shap_rf_bar_global.png": "c45117494c8a65d6a3e35b4c7a9b388271d9ea970c936d95608b019d7aa68317",
+    "shap_rf_beeswarm.png": "1ee3bb4d822f5813e0049cae9c8821e3cc39cadfa3115b32049e1441933b07d8",
+    "shap_rf_beeswarm_E.png": "abe2e657d54b7dfb97358d98995d0f4e1849b690c1797093e68621f80e18445e",
+    "shap_rf_beeswarm_G.png": "33358893324477cb3e482f1ca652595197cd7c0f6f4cd024e0993a31270f80e2",
+    "shap_rf_beeswarm_NonESG.png": "c5eb3c0af5629d9e995cde2c2c29edadbc40d7f40a7275c5dd0a6050c8c37bbb",
+    "shap_rf_beeswarm_S.png": "00a103c7d70660e113b90fe4590262f6454035429a45619a800672aab1a0faef",
+    "shap_rf_waterfall_E.png": "3ef0f2a511be6f14ffeac5296e04e5f04f4532fd4b4df94803578ce77149c35d",
+    "shap_xgb_bar_global.png": "bca26b0781c29b46dd64df497f487bf48945642012620ddabf4968a76456948d",
+    "shap_xgb_beeswarm.png": "a9ae2f5420e52eac66fd6c669e147d6f15d0eb7a25c5511db79ddcae3dd45e41",
+    "shap_xgb_beeswarm_E.png": "95dd1f28dd5cc513cc47865dcc0ad66bcfa50756a1cb18e63a5639ac8a5d18f6",
+    "shap_xgb_beeswarm_G.png": "1ee17d86aa8a86e42626cbe2a328427c6f959d0d529b2f09778b8d97dac3b964",
+    "shap_xgb_beeswarm_NonESG.png": "2e724556cd156ebc8ca9e4dd67738358e029836468457f38d70adec1466b9690",
+    "shap_xgb_beeswarm_S.png": "344333758f886714fda9cbf637490f70775f5d2ea7a276bf2b8a336839ec7c15",
+    "shap_xgb_waterfall_E.png": "d490c6e6b885929c73caa6a177841774469dba4b4a23fd8c3113995ce40d54f8",
+    "ml_baseline_predictions_v1_4232026.csv": "b3f0ceb6be16cf57524f5b931280d9fea6d1297e72cd8f1bc3c0594bf83add4d",
+    "ml_baseline_metrics_v1_4232026.json": "8b5940b56bae26d938f0e15b37a5884b498185490d7985d2a443385d16e5209b"
+  },
+  "rf_macro_f1": 0.676,
+  "rf_mcc": 0.686,
+  "xgb_macro_f1": 0.7684,
+  "xgb_mcc": 0.7467,
+  "shap_plots": [
+    "shap_rf_bar_global.png",
+    "shap_rf_beeswarm.png",
+    "shap_rf_beeswarm_E.png",
+    "shap_rf_beeswarm_G.png",
+    "shap_rf_beeswarm_NonESG.png",
+    "shap_rf_beeswarm_S.png",
+    "shap_rf_waterfall_E.png",
+    "shap_xgb_bar_global.png",
+    "shap_xgb_beeswarm.png",
+    "shap_xgb_beeswarm_E.png",
+    "shap_xgb_beeswarm_G.png",
+    "shap_xgb_beeswarm_NonESG.png",
+    "shap_xgb_beeswarm_S.png",
+    "shap_xgb_waterfall_E.png"
   ]
 }

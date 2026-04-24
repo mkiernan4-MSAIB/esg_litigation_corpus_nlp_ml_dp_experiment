@@ -1,0 +1,92 @@
+{
+  "step": "10_descriptive_analysis",
+  "description": "Word clouds and top-20 unigram/bigram/trigram extraction per ESG pillar.",
+  "script": "10_esg_descriptive_analysis.py",
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-23T17:40:38.108851+00:00",
+  "n_cases": 444,
+  "label_counts": {
+    "G": 171,
+    "Non-ESG": 134,
+    "E": 92,
+    "S": 47
+  },
+  "plots": [
+    "ngrams_all_pillars_v1_4232026.png",
+    "ngrams_E_v1_4232026.png",
+    "ngrams_G_v1_4232026.png",
+    "ngrams_NonESG_v1_4232026.png",
+    "ngrams_S_v1_4232026.png",
+    "wordcloud_composite_pillars_v1_4232026.png",
+    "wordcloud_E_v1_4232026.png",
+    "wordcloud_G_v1_4232026.png",
+    "wordcloud_global_v1_4232026.png",
+    "wordcloud_NonESG_v1_4232026.png",
+    "wordcloud_S_v1_4232026.png"
+  ],
+  "ngram_csv": "ngrams_v1_4232026.csv",
+  "top5_unigrams": {
+    "E": [
+      "ill",
+      "state",
+      "board",
+      "section",
+      "law"
+    ],
+    "S": [
+      "state",
+      "new",
+      "york",
+      "law",
+      "evidence"
+    ],
+    "G": [
+      "law",
+      "motion",
+      "state",
+      "rule",
+      "did"
+    ],
+    "Non-ESG": [
+      "evidence",
+      "board",
+      "state",
+      "service",
+      "vet"
+    ]
+  },
+  "sha256_outputs": {
+    "ngrams_all_pillars_v1_4232026.png": "f5b33bfb35970a4879f8905a551ff5672a64be073cfe5b239b0c8347c526452b",
+    "ngrams_E_v1_4232026.png": "610580cf982af9f49d5cb633243cd2720c97b109bc7848b0c771f767dcbbedea",
+    "ngrams_G_v1_4232026.png": "de68c4fc5fef48c025cba158a48cd1591bd5797ad2744dd59e806bf8b144941c",
+    "ngrams_NonESG_v1_4232026.png": "3307dd4a5fc9dc3cf990338ee8821692a40373ea5486cd2da429406d721aefd9",
+    "ngrams_S_v1_4232026.png": "3dd3270cf2669ac583712583ccfc7eb10d9db0b8f9778b8185f65b751db80e7d",
+    "wordcloud_composite_pillars_v1_4232026.png": "8002ce9061c28e4c87fd8efd37ce4b4336c010916a9c27682bc7dc827a730da7",
+    "wordcloud_E_v1_4232026.png": "ecd261968d64ed31b3c6bf0b1a0bb81aa39cfa21aaf2a6ee2e3bc3f9902f38b1",
+    "wordcloud_G_v1_4232026.png": "dff45a27fe16ad444d87a636fbc3928d438b8237e830163cd4920de872ccbc67",
+    "wordcloud_global_v1_4232026.png": "2db6319b400e3673f8e0903c36fa26feba45dffeb235f4290bc77828622e2ac8",
+    "wordcloud_NonESG_v1_4232026.png": "c1876539c7406ace5827e07f0efde149f6323aa03d2556813d65e2bfa2bf3225",
+    "wordcloud_S_v1_4232026.png": "e976adcbede8015a47b62cd373e5f97550fb1e0c2e0d4dce9c4a774d4315266b",
+    "ngrams_v1_4232026.csv": "7bcee41fe22c43a45a41e7a18df037cd78f709890f0fd0fda8c1627cf8c7077f"
+  },
+  "frozen_feature_matrix": "feature_matrix_v1_frozen.csv",
+  "frozen_sha256": "a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e",
+  "rows": 240,
+  "columns": [
+    "label",
+    "type",
+    "rank",
+    "token",
+    "count"
+  ],
+  "sha256_csv": "7bcee41fe22c43a45a41e7a18df037cd78f709890f0fd0fda8c1627cf8c7077f",
+  "manifest": "10_manifest.json",
+  "decisions": [
+    "Top-20 unigrams, bigrams, trigrams per pillar via CountVectorizer (min_df=2)",
+    "Custom stop-word list: ENGLISH_STOP_WORDS + legal boilerplate + 'outcome'",
+    "Token pattern: alphabetic tokens 2+ chars, no pure numbers",
+    "Word clouds: max_words=150, collocations=False, [OUTCOME] tokens stripped",
+    "Per-pillar n-gram images (1x3 panel each); composite 2x2 word cloud panel"
+  ]
+}

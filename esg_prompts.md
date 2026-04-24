@@ -23,23 +23,38 @@ Save the output as `ESG_corpus_cleaned_v1.csv`."
 
 ---
 
-### ** Prompt 2: Machine Learning Baseline & Interpretability (Status: COMPLETE — April 23, 2026)**
+### ** Prompt 2: Machine Learning Baseline & Interpretability (Status: COMPLETE — April 23, 2026, revised)**
 
 "I require Python code for a Google Colab environment to establish a Machine Learning baseline using the authoritative `ESG_corpus_cleaned_v1.csv` and `esg_corpus_labels.csv`. 
 
 The pipeline must:
-1.  **Feature Engineering:** Implement **TF-IDF vectorization** with `min_df=3` and N-grams (1,2) on the [OUTCOME] masked text.
-2.  **Multi-Class Strategy:** Train a **Random Forest** and **XGBoost** classifier for the four primary classes: **Environmental, Social, Governance, and Non-ESG**.
-3.  **Imbalance Mitigation:** Apply `class_weight='balanced'` to address the 'Social' pillar, which represents only **10.6% of the corpus** (47 cases).
-4.  **Evaluation:** Report **Macro-F1 and Matthews Correlation Coefficient (MCC)**.
-5.  **Interpretability:** Use **SHAP TreeExplainer** to produce high-resolution beeswarm and waterfall plots for the top 20 features."
+1.	Split data once into train/validation/test (stratify by label).
+2.	Feature Engineering: Implement TF-IDF vectorization with `min_df=3` and N-grams (1,2) on the [OUTCOME] masked text.
+3.	Baselines: majority class, Bag-of-Words logistic regression.
+4.	Multi-Class Strategy: Train a Logistic Regression, Random Forest, XGBoost/GBM, Naïve Bayes classifier for the four primary classes: Environmental, Social, Governance, and Non-ESG.
+5.	Imbalance Mitigation: Apply `class_weight='balanced'` to address the 'Social' pillar, which represents only 10.6% of the corpus (47 cases).
+6.	If binary label is heavily skewed, create sub-labels (e.g., 5-6 finer categories) and re-split.
+7.	Re-run models on the refined label set.
+8.	Evaluation: Report Macro-F1 and Matthews Correlation Coefficient (MCC), , recall, confusion matrix, precision, and AUC
+9.	Interpretability: Use SHAP TreeExplainer to produce high-resolution beeswarm and waterfall plots for the top 20 features."
+10.	Record metrics, ROC curves, feature importances in a second reproducibility package
+
 
 **Technical Note:** Classical ML is required as a baseline because the unique corpus size (444 cases) is below the threshold where Deep Learning consistently outperforms shallow models.
 
-**Execution results (April 23, 2026):** `06_esg_ml_baseline.py` executed locally. RF Macro-F1 = 0.6078 / MCC = 0.5721. XGBoost Macro-F1 = 0.8253 / MCC = 0.8015. XGBoost is authoritative ML baseline. 3 SHAP plots saved to `esg_corpus_outputs/ml_baseline/`.
+**Prior execution results (April 23, 2026 — superseded):** `06_esg_ml_baseline.py` v1 executed locally. RF Macro-F1 = 0.6078 / MCC = 0.5721. XGBoost Macro-F1 = 0.8253 / MCC = 0.8015. Script reopened — revised per expanded Prompt 2 requirements.
 
-**SHA-256 integrity anchors (v1 — April 23, 2026):**
-- `snapshot_06_ml_baseline_v1_4232026.csv` → `590b017fe1c73bd33cac1f52fc7373d225c21fd50a9c386ac074568636eae5a9`
+**Revised execution results (April 23, 2026 — final):** `06_esg_ml_baseline.py` v2 executed locally. Split: 310 train / 67 val / 67 test (stratified). 27 plots produced: 6 confusion matrices, 4 per-pillar ROC images, 2 feature importance, 2 global SHAP bar charts, 8 per-pillar dot beeswarms (RF+XGBoost x 4 pillars), 2 waterfall plots (E pillar, RF+XGBoost), 1 metrics summary table image. Best model: XGBoost (Macro-F1=0.7684 / MCC=0.7467 / AUC=0.9663). BoW-LR Baseline: F1=0.7529. LR: F1=0.7409. ComplementNB: F1=0.6117. RF: F1=0.6760. [OUTCOME] masking verified -- no leakage terms in top 20 SHAP features. Social class: 33 train cases, sufficient signal. SHAP uses Explanation-object API (explainer(pd.DataFrame(X, columns=fnames))). All matplotlib titles use '--' (ASCII) to avoid cp1252 encoding artifacts on Windows.
+
+**SHA-256 integrity anchors (v1 revised — April 23, 2026):**
+- `ml_baseline_metrics_v1_4232026.json` → `8b5940b56bae26d938f0e15b37a5884b498185490d7985d2a443385d16e5209b`
+- `ml_baseline_predictions_v1_4232026.csv` → `b3f0ceb6be16cf57524f5b931280d9fea6d1297e72cd8f1bc3c0594bf83add4d`
+- `06_manifest.json` → `8b61393fa4ae2dcc48db57041103006887f229133c17ad848c28819ac7ef769a`
+- `feature_matrix_v1_frozen.csv` (training input anchor) → `a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e`
+
+**SHA-256 integrity anchors (v1 revised -- April 23, 2026 -- regenerated):**
+- `snapshot_06_ml_baseline_v1_4232026.csv` → `b3f0ceb6be16cf57524f5b931280d9fea6d1297e72cd8f1bc3c0594bf83add4d`
+- `snapshot_06_ml_baseline_v1_4232026.zip` → `b7b3e40e1544dd52d7d79da6521bb285db7a6f7ad5fbe35ffb9a9d3037104fef` (23.6 MB)
 - `feature_matrix_v1_frozen.csv` (training input anchor) → `a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e`
 
 ---

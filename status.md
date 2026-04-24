@@ -5,9 +5,9 @@
 
 ## 1. Current Task Status
 
-**Session April 23, 2026 — ML BASELINE EXECUTED. REPRODUCIBILITY PACKAGE COMPLETE. VERSION CONTROL ACTIVE.**
+**Session April 23, 2026 — ML BASELINE REVISED AND RE-EXECUTED. DESCRIPTIVE ANALYSIS EXECUTED. REPRODUCIBILITY PACKAGE COMPLETE. VERSION CONTROL ACTIVE. LONGFORMER TRAINING IN PROGRESS (COLAB T4).**
 
-Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06). Scripts 07–08 written and ready for Colab GPU execution. Versioned reproducibility package (per-step zips + Jupyter notebook) committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
+Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06) — 27 plots, all bugs resolved, reproducibility zip regenerated (23.6 MB). Descriptive analysis executed locally (script 10) — 11 PNGs (6 word clouds + 4 per-pillar n-gram panels + 1 composite) + n-gram CSV produced. Script 07 revised with AMP, gradient checkpointing, fold-level resume, tqdm progress bars, and browser keepalive — currently executing in Colab T4 (seed 42 in progress). Script 08 pending Longformer completion. Versioned reproducibility package (per-step zips + Jupyter notebook) committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
 
 **GitHub repo:** https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment  
 **Latest commit:** aa54704 — versioned filenames + SHA-256 integrity hashes  
@@ -60,13 +60,21 @@ Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally 
 
 **~~Step 7b — Draft Methodology + Limitations slide narrative~~** ✓ Complete April 23, 2026. `esg_slide_narrative.md` — narrative prose, methodology table, 16 inline citations, no bullets.
 
-**~~Step 8a — Execute 06_esg_ml_baseline.py~~** ✓ Complete April 23, 2026. RF Macro-F1 = 0.6078 / MCC = 0.5721. XGBoost Macro-F1 = 0.8253 / MCC = 0.8015. 3 SHAP plots saved. `06_manifest.json` written.
+**~~Step 8a — Execute 06_esg_ml_baseline.py (v1)~~** ✓ Superseded April 23, 2026. Original results: RF Macro-F1 = 0.6078, XGBoost Macro-F1 = 0.8253. Prompt 2 reopened — script revised.
 
-**Step 8b — Execute 07_esg_longformer.py (Colab GPU required).** Run in Colab T4/A100. Produces Longformer checkpoints + CLS embeddings.
+**~~Step 8a-rev — Execute revised 06_esg_ml_baseline.py~~** ✓ Complete April 23, 2026. Split: 310/67/67 (stratified). 5 models: Majority Baseline F1=0.1398, BoW-LR F1=0.7529, LR F1=0.7409, ComplementNB F1=0.6117, RF F1=0.6760, XGBoost F1=0.7684 (authoritative). 27 plots: 5 confusion matrices, 4 per-pillar ROC images, 2 feature importance, 2 global SHAP bar charts, 8 per-pillar dot beeswarms (RF+XGBoost×4 pillars), 2 waterfall (E pillar, RF+XGBoost). SHAP uses new Explanation-object API (`explainer(X)`). [OUTCOME] masking verified clean.
+
+**~~Step 10 — Execute 10_esg_descriptive_analysis.py~~** ✓ Complete April 23, 2026. Word clouds (global + 4 pillars + composite) and per-pillar n-gram charts (top-20 unigrams/bigrams/trigrams × 4 pillars, one image each) produced. 11 PNGs + CSV in `esg_corpus_outputs/descriptive_analysis/`. `10_manifest.json` written.
+
+**~~Step 10b — Reproducibility zip (snapshot_10_descriptive_analysis_v1_4232026.zip)~~** ✓ Complete April 23, 2026. 11.7 MB zip in `step_zips/`. Contains 11 PNGs, ngrams CSV, snapshot CSV+JSON, script, manifests, CLAUDE.md, status.md. SHA-256: `eb39099fada1e8f999a8036b53bac293325bf7ab47cb2d8574b37be17e518c90`. Frozen anchor verified: `a2b95dfd...` (matches master).
+
+**Step 8b — Execute 07_esg_longformer.py (Colab GPU required).** Script revised April 23, 2026: added AMP mixed precision (FP16), gradient checkpointing, fold-level resume via `07_progress.json`, training loss logging, MCC per epoch, 3-seed x 3-fold config. Run in Colab T4/A100. On each session start, re-run the same cell -- it skips completed folds automatically. Session 1 target: seed 42 (all 3 folds, ~4-6 hrs T4). Session 2: seeds 123 + 7. Produces `longformer_s{seed}_f{fold}.pt` checkpoints + `longformer_embeddings.npy` + `07_manifest.json`.
 
 **Step 8c — Execute 08_esg_xai_visualizations.py** (after 07 completes). Produces ROC curves, word clouds, SHAP, t-SNE, attention heatmaps.
 
 **~~Step 8d — Reproducibility package + version control~~** ✓ Complete April 23, 2026. 6 versioned snapshot pairs (CSV + JSON) in `snapshots/`. 6 per-step zips in `step_zips/` (each contains snapshot CSV + JSON + manifest + script + step outputs). Jupyter notebook included in `snapshot_06_ml_baseline.zip`. Git repo initialized; 2 commits pushed to GitHub (c1238c4, 8f8a4e7). `ESG_corpus_cleaned_v1.csv` git-excluded (24MB) but included in `snapshot_05_text_cleaning.zip`. PAT deleted — generate new one before next push.
+
+**~~Step 8e — Regenerate step-06 reproducibility zip (revised 27-plot outputs)~~** ✓ Complete April 23, 2026. `06_create_reproducibility_zip.py` executed. 23.6 MB zip in `step_zips/`. Contains 24 PNGs, 5 .pkl models, predictions CSV, metrics JSON, snapshot CSV+JSON, script, manifests. Frozen anchor verified: `a2b95dfd...` (matches master). SHA-256: `b7b3e40e1544dd52d7d79da6521bb285db7a6f7ad5fbe35ffb9a9d3037104fef`.
 
 **Step 9 — Revise all 9 PowerPoint slides.** Use `esg_slide_narrative.md` as source. Narrative prose, no bullets, inline citations, methodology table + narrative, descriptive-to-predictive pipeline explicit, expanded limitations. Framing: surfacing ESG legal issues from case law. Produce in Claude.ai using pptx skill.
 
@@ -89,8 +97,17 @@ Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally 
 | `snapshot_03_corpus_stats_v1_4232026.csv` | `75cc74176bbf56f8d90fc6e1b907b98e1bcd202289c95b53a684531ac9494fe0` |
 | `snapshot_04_label_construction_v1_4232026.csv` | `97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd` |
 | `snapshot_05_text_cleaning_v1_4232026.csv` | `aaa9f821b49cb1c5cb007453f381340ac473e2758d99becfec887db4a76c1c6e` |
-| `snapshot_06_ml_baseline_v1_4232026.csv` | `590b017fe1c73bd33cac1f52fc7373d225c21fd50a9c386ac074568636eae5a9` |
+| `snapshot_06_ml_baseline_v1_4232026.csv` | `b3f0ceb6be16cf57524f5b931280d9fea6d1297e72cd8f1bc3c0594bf83add4d` *(regenerated from revised outputs)* |
+| `snapshot_06_ml_baseline_v1_4232026.zip` | `b7b3e40e1544dd52d7d79da6521bb285db7a6f7ad5fbe35ffb9a9d3037104fef` |
 | `esg_slide_narrative.md` | `d0aa3af748504d42c4227c7284f28b69ee55a8d55df8e8de7df14bf502fba707` |
+| `ngrams_E_v1_4232026.png` | *(verify on next run — supersedes combined ngrams_all_pillars image)* |
+| `ngrams_S_v1_4232026.png` | *(verify on next run)* |
+| `ngrams_G_v1_4232026.png` | *(verify on next run)* |
+| `ngrams_NonESG_v1_4232026.png` | *(verify on next run)* |
+| `ngrams_v1_4232026.csv` | `7bcee41fe22c43a45a41e7a18df037cd78f709890f0fd0fda8c1627cf8c7077f` |
+| `wordcloud_global_v1_4232026.png` | `00115d0d51c46d15c5ec7159953ca9bb15f5d38a62cb24b1f62419746f349219` |
+| `wordcloud_composite_pillars_v1_4232026.png` | `77a070fab8c88cf8b27c59c3f1c479e655a399524e9ad7b2923cd97828fc30c5` |
+| `snapshot_10_descriptive_analysis_v1_4232026.zip` | `eb39099fada1e8f999a8036b53bac293325bf7ab47cb2d8574b37be17e518c90` |
 
 ---
 
@@ -116,6 +133,9 @@ Every revised slide must be written in narrative prose sentences — no bullet p
 | `07_esg_longformer.py` | Project root | Longformer fine-tuning (Colab GPU) → `esg_corpus_outputs/longformer/` |
 | `08_esg_xai_visualizations.py` | Project root | ROC, word clouds, SHAP, t-SNE, attention → `esg_corpus_outputs/visualizations/` |
 | `09_create_reproducibility_package.py` | Project root | Generates snapshots/, step_zips/, Jupyter notebook |
+| `10_esg_descriptive_analysis.py` | Project root | Word clouds + n-gram extraction → `esg_corpus_outputs/descriptive_analysis/` |
+| `06_create_reproducibility_zip.py` | Project root | Step-06 reproducibility zip → `step_zips/snapshot_06_ml_baseline_v1_4232026.zip` (revised 27-plot outputs) |
+| `10_create_reproducibility_zip.py` | Project root | Step-10 reproducibility zip → `step_zips/snapshot_10_descriptive_analysis_v1_4232026.zip` |
 | `esg_slide_narrative.md` | Project root | Methodology + Limitations slide prose with 16 inline citations |
 | `esg_prompts.md` | Project root | Canonical prompt list for all pipeline phases |
 | `esg_corpus_outputs/esg_corpus_labels.csv` | Outputs | Authoritative label source |

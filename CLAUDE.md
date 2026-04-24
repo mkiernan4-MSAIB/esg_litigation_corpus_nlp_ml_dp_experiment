@@ -64,6 +64,8 @@ esg_project/
 ├── 07_esg_longformer.py                   # Longformer fine-tuning (Colab GPU)
 ├── 08_esg_xai_visualizations.py           # ROC, word clouds, SHAP, t-SNE, attention
 ├── 09_create_reproducibility_package.py   # versioned snapshots + per-step zips + SHA-256
+├── 10_esg_descriptive_analysis.py         # word clouds + n-gram extraction → descriptive_analysis/
+├── 10_create_reproducibility_zip.py       # step-10 reproducibility zip → step_zips/
 ├── 01_manifest.json → 09_manifest.json    # completion state per script
 ├── esg_corpus/                            # 1,282 raw .md files
 ├── esg_corpus_deduped/                    # 918 unique canonical cases
@@ -129,12 +131,25 @@ Any case with no nexus to environmental conduct, treatment of people, governance
 - `snapshot_03_corpus_stats_v1_4232026.csv` → `75cc74176bbf56f8d90fc6e1b907b98e1bcd202289c95b53a684531ac9494fe0`
 - `snapshot_04_label_construction_v1_4232026.csv` → `97ee91e30aa008e46940bd189130714d213be3cbc86023f3ba615a5d441a6efd`
 - `snapshot_05_text_cleaning_v1_4232026.csv` → `aaa9f821b49cb1c5cb007453f381340ac473e2758d99becfec887db4a76c1c6e`
-- `snapshot_06_ml_baseline_v1_4232026.csv` → `590b017fe1c73bd33cac1f52fc7373d225c21fd50a9c386ac074568636eae5a9`
+- `snapshot_06_ml_baseline_v1_4232026.csv` → `b3f0ceb6be16cf57524f5b931280d9fea6d1297e72cd8f1bc3c0594bf83add4d` *(regenerated — revised 27-plot outputs)*
+- `snapshot_06_ml_baseline_v1_4232026.zip` → `b7b3e40e1544dd52d7d79da6521bb285db7a6f7ad5fbe35ffb9a9d3037104fef` (23.6 MB — 24 PNGs + 5 pkl + predictions + metrics)
 - `esg_slide_narrative.md` → `d0aa3af748504d42c4227c7284f28b69ee55a8d55df8e8de7df14bf502fba707`
+- `ngrams_E_v1_4232026.png` → *(verify on next run — supersedes combined ngrams_all_pillars image)*
+- `ngrams_S_v1_4232026.png` → *(verify on next run)*
+- `ngrams_G_v1_4232026.png` → *(verify on next run)*
+- `ngrams_NonESG_v1_4232026.png` → *(verify on next run)*
+- `ngrams_v1_4232026.csv` → `7bcee41fe22c43a45a41e7a18df037cd78f709890f0fd0fda8c1627cf8c7077f`
+- `wordcloud_global_v1_4232026.png` → `00115d0d51c46d15c5ec7159953ca9bb15f5d38a62cb24b1f62419746f349219`
+- `wordcloud_composite_pillars_v1_4232026.png` → `77a070fab8c88cf8b27c59c3f1c479e655a399524e9ad7b2923cd97828fc30c5`
+- `snapshot_10_descriptive_analysis_v1_4232026.zip` → `eb39099fada1e8f999a8036b53bac293325bf7ab47cb2d8574b37be17e518c90`
 
-**Reproducibility package (April 23, 2026):** `snapshots/` — 6 versioned snapshot CSV+JSON pairs. `step_zips/` — 6 per-step zips each containing `reproducibility_manifest_v1_4232026.json` with SHA-256 for every file inside. Jupyter notebook integrity check cell asserts frozen matrix hash on load. 5 commits pushed to GitHub via SSH. Remote: `git@github.com:mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment.git`. No PATs — SSH ed25519 key at `~/.ssh/id_ed25519`.
+**Descriptive analysis results (April 23, 2026 — executed, final):** `10_esg_descriptive_analysis.py` executed locally. 11 PNGs: 5 individual word clouds (global, E, S, G, NonESG) + 1 composite 2x2 panel + 4 per-pillar n-gram images (ngrams_E/S/G/NonESG_v1_4232026.png — each a 1x3 panel of unigrams/bigrams/trigrams, top 20 each). `ngrams_v1_4232026.csv` (machine-readable). All matplotlib titles use '--' (ASCII). `10_manifest.json` written. Reproducibility zip: `snapshot_10_descriptive_analysis_v1_4232026.zip` (11.7 MB) in `step_zips/`. SHA-256: `eb39099fada1e8f999a8036b53bac293325bf7ab47cb2d8574b37be17e518c90`. Frozen anchor re-verified: `a2b95dfd...`.
 
-**ML baseline results (April 23, 2026 — executed):** Random Forest Macro-F1 = 0.6078 / MCC = 0.5721 (S recall 0.13 — RF underperforms on sparse high-dimensional features with minority class). XGBoost Macro-F1 = 0.8253 / MCC = 0.8015 (S recall 0.60). XGBoost is the authoritative ML baseline. SHAP plots saved to `esg_corpus_outputs/ml_baseline/`. `06_manifest.json` written.
+**Reproducibility package (April 23, 2026):** `snapshots/` — 6 versioned snapshot CSV+JSON pairs. `step_zips/` — 7 per-step zips (01–06 + 10) each containing `reproducibility_manifest_v1_4232026.json` with SHA-256 for every file inside. Step-06 zip regenerated April 23, 2026 for revised 27-plot outputs (SHA-256: `b7b3e40e...`, 23.6 MB). Jupyter notebook integrity check cell asserts frozen matrix hash on load. 5 commits pushed to GitHub via SSH. Remote: `git@github.com:mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment.git`. No PATs -- SSH ed25519 key at `~/.ssh/id_ed25519`.
+
+**Longformer training config (April 23, 2026 — in progress):** `07_esg_longformer.py` revised and running in Colab T4. Key additions: AMP FP16 (`GradScaler` + `autocast`), gradient checkpointing, fold-level resume via `07_progress.json` (written after every fold — re-run same cell to resume), tqdm progress bars (epoch + batch + embedding), browser keepalive (JS `setInterval` injected via `IPython.display` — prevents Colab idle disconnect). HF token read from Colab Secret `UN_SquishMug`. Config: SEEDS=[42,123,7], N_FOLDS=3, EPOCHS=5, BATCH_SIZE=1, GRAD_ACCUM=16, LR=2e-5, FREEZE_LAYERS=8, USE_AMP=True. Session 1: seed 42 (~4-6 hrs). Session 2: seeds 123+7 (~8-12 hrs). SHA-256 to be recorded on completion.
+
+**ML baseline results (April 23, 2026 — revised, re-executed, final):** `06_esg_ml_baseline.py` v2. Stratified 70/15/15 split (310/67/67). Six models evaluated on held-out test set (n=67): Majority Baseline F1=0.1398/MCC=0.0000, BoW-LR F1=0.7529/MCC=0.6635/AUC=0.9135, Logistic Regression F1=0.7409/MCC=0.6666/AUC=0.9056, ComplementNB F1=0.6117/MCC=0.5806/AUC=0.8759, Random Forest F1=0.6760/MCC=0.6860/AUC=0.9287, XGBoost F1=0.7684/MCC=0.7467/AUC=0.9663. XGBoost is authoritative ML baseline. 27 plots total: 6 confusion matrices, 4 per-pillar ROC images, 2 feature importance, 2 global SHAP multi-class bar charts, 8 per-pillar dot beeswarms (RF+XGBoost x 4 pillars), 2 waterfall plots (E pillar), 1 metrics summary table image. SHAP uses Explanation-object API: `explainer(pd.DataFrame(X, columns=fnames))` — feature names propagated from TF-IDF vocabulary. All matplotlib title strings use '--' (ASCII) not em-dash -- cp1252 encoding on Windows renders U+2014 as garbled characters in PNG output. LabelEncoder sorts alphabetically; `LE_LABEL_NAMES = [LABEL_NAMES[c] for c in le.classes_]` required for correct pillar display names. [OUTCOME] masking verified clean -- no leakage in top features.
 
 ---
 

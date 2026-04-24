@@ -1,0 +1,188 @@
+{
+  "majority_class": {
+    "macro_f1": 0.1398,
+    "mcc": 0.0,
+    "auc_macro_ovr": 0.5,
+    "per_class": {
+      "Environmental": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 14
+      },
+      "Governance": {
+        "precision": 0.3881,
+        "recall": 1.0,
+        "f1": 0.5591,
+        "support": 26
+      },
+      "Non-ESG": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 20
+      },
+      "Social": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 7
+      }
+    }
+  },
+  "bow_logistic_regression": {
+    "macro_f1": 0.7529,
+    "mcc": 0.6635,
+    "auc_macro_ovr": 0.9135,
+    "per_class": {
+      "Environmental": {
+        "precision": 0.6111,
+        "recall": 0.7857,
+        "f1": 0.6875,
+        "support": 14
+      },
+      "Governance": {
+        "precision": 0.7241,
+        "recall": 0.8077,
+        "f1": 0.7636,
+        "support": 26
+      },
+      "Non-ESG": {
+        "precision": 0.9375,
+        "recall": 0.75,
+        "f1": 0.8333,
+        "support": 20
+      },
+      "Social": {
+        "precision": 1.0,
+        "recall": 0.5714,
+        "f1": 0.7273,
+        "support": 7
+      }
+    }
+  },
+  "logistic_regression": {
+    "macro_f1": 0.7409,
+    "mcc": 0.6666,
+    "auc_macro_ovr": 0.9056,
+    "per_class": {
+      "Environmental": {
+        "precision": 0.6111,
+        "recall": 0.7857,
+        "f1": 0.6875,
+        "support": 14
+      },
+      "Governance": {
+        "precision": 0.7333,
+        "recall": 0.8462,
+        "f1": 0.7857,
+        "support": 26
+      },
+      "Non-ESG": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1": 0.8235,
+        "support": 20
+      },
+      "Social": {
+        "precision": 0.8,
+        "recall": 0.5714,
+        "f1": 0.6667,
+        "support": 7
+      }
+    }
+  },
+  "complement_naive_bayes": {
+    "macro_f1": 0.6117,
+    "mcc": 0.5806,
+    "auc_macro_ovr": 0.8759,
+    "per_class": {
+      "Environmental": {
+        "precision": 0.6111,
+        "recall": 0.7857,
+        "f1": 0.6875,
+        "support": 14
+      },
+      "Governance": {
+        "precision": 0.6286,
+        "recall": 0.8462,
+        "f1": 0.7213,
+        "support": 26
+      },
+      "Non-ESG": {
+        "precision": 1.0,
+        "recall": 0.65,
+        "f1": 0.7879,
+        "support": 20
+      },
+      "Social": {
+        "precision": 1.0,
+        "recall": 0.1429,
+        "f1": 0.25,
+        "support": 7
+      }
+    }
+  },
+  "random_forest": {
+    "macro_f1": 0.676,
+    "mcc": 0.686,
+    "auc_macro_ovr": 0.9287,
+    "per_class": {
+      "Environmental": {
+        "precision": 0.8462,
+        "recall": 0.7857,
+        "f1": 0.8148,
+        "support": 14
+      },
+      "Governance": {
+        "precision": 0.6667,
+        "recall": 0.9231,
+        "f1": 0.7742,
+        "support": 26
+      },
+      "Non-ESG": {
+        "precision": 0.9412,
+        "recall": 0.8,
+        "f1": 0.8649,
+        "support": 20
+      },
+      "Social": {
+        "precision": 1.0,
+        "recall": 0.1429,
+        "f1": 0.25,
+        "support": 7
+      }
+    }
+  },
+  "xgboost": {
+    "macro_f1": 0.7684,
+    "mcc": 0.7467,
+    "auc_macro_ovr": 0.9663,
+    "per_class": {
+      "Environmental": {
+        "precision": 0.75,
+        "recall": 0.8571,
+        "f1": 0.8,
+        "support": 14
+      },
+      "Governance": {
+        "precision": 0.84,
+        "recall": 0.8077,
+        "f1": 0.8235,
+        "support": 26
+      },
+      "Non-ESG": {
+        "precision": 0.8636,
+        "recall": 0.95,
+        "f1": 0.9048,
+        "support": 20
+      },
+      "Social": {
+        "precision": 0.75,
+        "recall": 0.4286,
+        "f1": 0.5455,
+        "support": 7
+      }
+    }
+  }
+}

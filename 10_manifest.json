@@ -1,0 +1,69 @@
+{
+  "script": "10_esg_descriptive_analysis.py",
+  "version": "v1",
+  "date_stamp": "4232026",
+  "n_cases": 444,
+  "label_counts": {
+    "G": 171,
+    "Non-ESG": 134,
+    "E": 92,
+    "S": 47
+  },
+  "outputs_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\descriptive_analysis",
+  "plots": [
+    "ngrams_E_v1_4232026.png",
+    "ngrams_G_v1_4232026.png",
+    "ngrams_NonESG_v1_4232026.png",
+    "ngrams_S_v1_4232026.png",
+    "wordcloud_composite_pillars_v1_4232026.png",
+    "wordcloud_E_v1_4232026.png",
+    "wordcloud_G_v1_4232026.png",
+    "wordcloud_global_v1_4232026.png",
+    "wordcloud_NonESG_v1_4232026.png",
+    "wordcloud_S_v1_4232026.png"
+  ],
+  "ngram_csv": "ngrams_v1_4232026.csv",
+  "sha256": {
+    "ngrams_E_v1_4232026.png": "a9c2519d263c94f68ee03a79caa4a469f10e264947ff9a5b84341d831e28b558",
+    "ngrams_G_v1_4232026.png": "87dcf271cea902c47c00c2575f69a7712795cbae3318b723839675b5f568ba2b",
+    "ngrams_NonESG_v1_4232026.png": "3e6f420c3160a0242d906f31786e8908fec1c0232fe7e95052bc6c3c021597ae",
+    "ngrams_S_v1_4232026.png": "c58167167ca2efbb559d35f5c5c0732b2d5b0ea2c79eb161308804e1641c1c57",
+    "wordcloud_composite_pillars_v1_4232026.png": "6ecdc2e93d867948d1743e7dfac70a0ccd1e74bb09aacdbfe598a37f43aaaedd",
+    "wordcloud_E_v1_4232026.png": "df9e768aff4ed7092e7fa2d82de0118b96c627b2afe8124333f668eb0feedd8a",
+    "wordcloud_G_v1_4232026.png": "c4c0c8af5083dda15ca02ed1342a1b082cd74c616c7a866d94434dbde689d28f",
+    "wordcloud_global_v1_4232026.png": "ebff0a3c3d345acd588acd655a267e2dab323434ab48e465f2c1be85975120ef",
+    "wordcloud_NonESG_v1_4232026.png": "728cc7262468eb44489c756b138763a15227f5aa24010076eb2520e193caac70",
+    "wordcloud_S_v1_4232026.png": "521bb6d97bac56c1f18351eba2d94680e9296e5c977fbb9d0b9b7c569fc3c0b9",
+    "ngrams_v1_4232026.csv": "7bcee41fe22c43a45a41e7a18df037cd78f709890f0fd0fda8c1627cf8c7077f"
+  },
+  "top5_unigrams_per_pillar": {
+    "E": [
+      "ill",
+      "state",
+      "board",
+      "section",
+      "law"
+    ],
+    "S": [
+      "state",
+      "new",
+      "york",
+      "law",
+      "evidence"
+    ],
+    "G": [
+      "law",
+      "motion",
+      "state",
+      "rule",
+      "did"
+    ],
+    "Non-ESG": [
+      "evidence",
+      "board",
+      "state",
+      "service",
+      "vet"
+    ]
+  }
+}

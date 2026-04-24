@@ -33,22 +33,31 @@ esg_corpus_filtered/                 444 high-signal ESG cases
     |                                -> 05_manifest.json
     |                                -> ESG_corpus_cleaned_v1.csv  [AUTHORITATIVE MODEL INPUT]
     |
-    06_esg_ml_baseline.py            TF-IDF + RF + XGBoost + SHAP
+    06_esg_ml_baseline.py            TF-IDF + 6 models + SHAP (27 plots)  [COMPLETE]
     |  (CPU-viable)                  -> 06_manifest.json
     |                                -> esg_corpus_outputs/ml_baseline/
     |
-    07_esg_longformer.py             Longformer-base-4096 fine-tuning
-    |  (Colab GPU required)          -> 07_manifest.json
+    10_esg_descriptive_analysis.py   Word clouds + n-gram extraction (11 PNGs)  [COMPLETE]
+    |  (CPU-viable)                  -> 10_manifest.json
+    |                                -> esg_corpus_outputs/descriptive_analysis/
+    |
+    07_esg_longformer.py             Longformer-base-4096 fine-tuning  [IN PROGRESS -- Colab T4]
+    |  (Colab GPU required)          3 seeds x 3 folds x 5 epochs, AMP FP16
+    |  AMP + grad checkpointing      Resume via 07_progress.json (fold-level)
+    |  Browser keepalive built-in    -> 07_manifest.json
     |                                -> esg_corpus_outputs/longformer/
     |
-    08_esg_xai_visualizations.py     ROC, word clouds, SHAP, t-SNE, attention
+    08_esg_xai_visualizations.py     ROC, word clouds, SHAP, t-SNE, attention  [PENDING -- blocked on 07]
     |  (run after 07)                -> 08_manifest.json
     |                                -> esg_corpus_outputs/visualizations/
     |
     09_create_reproducibility_package.py
-                                     Versioned snapshots + per-step zips + SHA-256
+                                     Versioned snapshots + per-step zips + SHA-256  [COMPLETE]
                                      -> 09_manifest.json
                                      -> snapshots/  step_zips/
+    |
+    06_create_reproducibility_zip.py  Step-06 zip regenerated for revised 27-plot outputs  [COMPLETE]
+    10_create_reproducibility_zip.py  Step-10 zip  [COMPLETE]
 ```
 
 ---
@@ -68,14 +77,20 @@ esg_corpus_filtered/                 444 high-signal ESG cases
 
 ---
 
-## ML Baseline Results (April 23, 2026)
+## ML Baseline Results (April 23, 2026 — revised)
 
-| Model | Macro-F1 | MCC |
-|---|---|---|
-| Random Forest | 0.6078 | 0.5721 |
-| **XGBoost** | **0.8253** | **0.8015** |
+Test set n=67 | Stratified 70/15/15 split | TF-IDF ngram(1,2) min_df=3
 
-XGBoost is the authoritative ML baseline. Longformer results pending Colab GPU execution.
+| Model | Macro-F1 | MCC | AUC (OvR) |
+|---|---|---|---|
+| Majority Baseline | 0.1398 | 0.0000 | 0.5000 |
+| BoW Logistic Regression | 0.7529 | 0.6635 | 0.9135 |
+| Logistic Regression | 0.7409 | 0.6666 | 0.9056 |
+| Complement Naive Bayes | 0.6117 | 0.5806 | 0.8759 |
+| Random Forest | 0.6760 | 0.6860 | 0.9287 |
+| **XGBoost** | **0.7684** | **0.7467** | **0.9663** |
+
+XGBoost is the authoritative ML baseline. 27 plots produced (confusion matrices, per-pillar ROC curves, SHAP beeswarms/waterfall/bar). Longformer results pending Colab GPU execution.
 
 ---
 
@@ -91,14 +106,15 @@ SHA-256: a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e
 
 Per-step reproducibility zips in `step_zips/`:
 
-| Zip | Contents |
-|---|---|
-| `snapshot_01_deduplication_v1_4232026.zip` | CSV, JSON, manifest, script |
-| `snapshot_02_noise_filtering_v1_4232026.zip` | + filter_log.csv |
-| `snapshot_03_corpus_stats_v1_4232026.zip` | + pillar metadata, stats.txt |
-| `snapshot_04_label_construction_v1_4232026.zip` | + esg_corpus_labels.csv |
-| `snapshot_05_text_cleaning_v1_4232026.zip` | + feature_matrix_v1_frozen.csv |
-| `snapshot_06_ml_baseline_v1_4232026.zip` | + SHAP PNGs, metrics, Jupyter notebook |
+| Zip | Contents | SHA-256 (first 16) |
+|---|---|---|
+| `snapshot_01_deduplication_v1_4232026.zip` | CSV, JSON, manifest, script | `ae7f5a54...` |
+| `snapshot_02_noise_filtering_v1_4232026.zip` | + filter_log.csv | `d67fbb4e...` |
+| `snapshot_03_corpus_stats_v1_4232026.zip` | + pillar metadata, stats.txt | `75cc7417...` |
+| `snapshot_04_label_construction_v1_4232026.zip` | + esg_corpus_labels.csv | `97ee91e3...` |
+| `snapshot_05_text_cleaning_v1_4232026.zip` | + feature_matrix_v1_frozen.csv | `aaa9f821...` |
+| `snapshot_06_ml_baseline_v1_4232026.zip` | 24 PNGs, 5 pkl models, metrics, predictions | `b7b3e40e...` |
+| `snapshot_10_descriptive_analysis_v1_4232026.zip` | 11 PNGs, n-gram CSV | `eb39099f...` |
 
 Each zip contains `reproducibility_manifest_v1_4232026.json` with SHA-256 for every file.
 
