@@ -5,12 +5,12 @@
 
 ## 1. Current Task Status
 
-**Session April 23, 2026 — ML BASELINE REVISED AND RE-EXECUTED. DESCRIPTIVE ANALYSIS EXECUTED. REPRODUCIBILITY PACKAGE COMPLETE. VERSION CONTROL ACTIVE. LONGFORMER TRAINING IN PROGRESS (COLAB T4).**
+**Session April 23–24, 2026 — ML BASELINE REVISED AND RE-EXECUTED. DESCRIPTIVE ANALYSIS EXECUTED. LONGFORMER TRAINING COMPLETE (9/9 FOLDS). REPRODUCIBILITY PACKAGE COMPLETE. VERSION CONTROL ACTIVE.**
 
-Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06) — 27 plots, all bugs resolved, reproducibility zip regenerated (23.6 MB). Descriptive analysis executed locally (script 10) — 11 PNGs (6 word clouds + 4 per-pillar n-gram panels + 1 composite) + n-gram CSV produced. Script 07 revised with AMP, gradient checkpointing, fold-level resume, tqdm progress bars, and browser keepalive — currently executing in Colab T4 (seed 42 in progress). Script 08 pending Longformer completion. Versioned reproducibility package (per-step zips + Jupyter notebook) committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
+Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06) — 27 plots, all bugs resolved, reproducibility zip regenerated (23.6 MB). Descriptive analysis executed locally (script 10) — 11 PNGs (6 word clouds + 4 per-pillar n-gram panels + 1 composite) + n-gram CSV produced. Script 07 complete — Longformer fine-tuning finished on Colab T4: 9/9 folds (3 seeds × 3 folds), final Macro-F1=0.4355 ± 0.0370, CLS embeddings extracted (444×768). Script 08 now unblocked. Versioned reproducibility package committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
 
 **GitHub repo:** https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment  
-**Latest commit:** aa54704 — versioned filenames + SHA-256 integrity hashes  
+**Latest commit:** f4229dc — revised ML baseline (27 plots), Longformer training script, step-10 descriptive analysis  
 **Auth method:** SSH (ed25519). Remote set to `git@github.com:mkiernan4-MSAIB/...`. No PATs required. Push with `git push origin master`.
 
 **REMAINING EXECUTION:**
@@ -68,9 +68,11 @@ Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally 
 
 **~~Step 10b — Reproducibility zip (snapshot_10_descriptive_analysis_v1_4232026.zip)~~** ✓ Complete April 23, 2026. 11.7 MB zip in `step_zips/`. Contains 11 PNGs, ngrams CSV, snapshot CSV+JSON, script, manifests, CLAUDE.md, status.md. SHA-256: `eb39099fada1e8f999a8036b53bac293325bf7ab47cb2d8574b37be17e518c90`. Frozen anchor verified: `a2b95dfd...` (matches master).
 
-**Step 8b — Execute 07_esg_longformer.py (Colab GPU required).** Script revised April 23, 2026: added AMP mixed precision (FP16), gradient checkpointing, fold-level resume via `07_progress.json`, training loss logging, MCC per epoch, 3-seed x 3-fold config. Run in Colab T4/A100. On each session start, re-run the same cell -- it skips completed folds automatically. Session 1 target: seed 42 (all 3 folds, ~4-6 hrs T4). Session 2: seeds 123 + 7. Produces `longformer_s{seed}_f{fold}.pt` checkpoints + `longformer_embeddings.npy` + `07_manifest.json`.
+**~~Step 8b — Execute 07_esg_longformer.py (Colab GPU)~~** ✓ Complete April 24, 2026. 9/9 folds complete (3 seeds × 3 folds × 5 epochs). **Longformer Macro-F1: 0.4355 ± 0.0370**. Seed 7: 0.4628 ± 0.0202 [folds: 0.4625, 0.4381, 0.4877]. Loss decreased monotonically each fold (~1.34→~0.88), confirming model convergence. CLS embeddings extracted: shape=(444, 768), saved to `esg_corpus_outputs/longformer/longformer_embeddings.npy`. Checkpoints: `longformer_s42_f{1-3}.pt`, `longformer_s123_f{1-3}.pt`, `longformer_s7_f{1-3}.pt`. `07_manifest.json` + `07_progress.json` written. Longformer F1=0.4355 vs XGBoost F1=0.7684 — expected for 148M-parameter model on 444-case corpus; primary limitations finding. `longformer_embeddings.npy` SHA-256: `684c816b43adeb857b09c391a7fed390b899b662086a7e64bc973f377a364d74`.
 
-**Step 8c — Execute 08_esg_xai_visualizations.py** (after 07 completes). Produces ROC curves, word clouds, SHAP, t-SNE, attention heatmaps.
+**~~Step 8f — 07 reproducibility zip~~** ✓ Complete April 25, 2026. `07_create_reproducibility_zip.py` written and executed. 1.3 MB zip in `step_zips/` — contains embeddings.npy + labels.npy + snapshot CSV+JSON + script + manifests. Checkpoints (568 MB × 9) excluded from zip; all 9 SHA-256 hashes recorded in reproducibility_manifest. Frozen anchor verified: `a2b95dfd...` (matches master). Zip SHA-256: `6aacfc06bbb0a4debb94baf17c102913bf42659eb5122ed71cf03a90e72bee0f`.
+
+**~~Step 8c — Execute 08_esg_xai_visualizations.py~~** ✓ Partially complete April 25, 2026. 4/5 sections ran locally. Outputs in `esg_corpus_outputs/visualizations/`: `roc_curves_ml_baseline.png`, `word_clouds_by_class.png`, `shap_longformer_partition.png` (KernelExplainer on CLS embeddings, 30 samples), `tsne_longformer_embeddings.png`. Section 5 (attention heatmaps) deferred to Colab — requires `torch` not installed locally. `08_manifest.json` written. Script fixed: versioned predictions filename, t-SNE label encoding (le.transform not enumerate index), SHAP class_names use `le.classes_`, all em-dashes → '--', `max_iter` (not deprecated `n_iter`) for t-SNE. **Attention heatmap pending Colab re-run of section 5 only.**
 
 **~~Step 8d — Reproducibility package + version control~~** ✓ Complete April 23, 2026. 6 versioned snapshot pairs (CSV + JSON) in `snapshots/`. 6 per-step zips in `step_zips/` (each contains snapshot CSV + JSON + manifest + script + step outputs). Jupyter notebook included in `snapshot_06_ml_baseline.zip`. Git repo initialized; 2 commits pushed to GitHub (c1238c4, 8f8a4e7). `ESG_corpus_cleaned_v1.csv` git-excluded (24MB) but included in `snapshot_05_text_cleaning.zip`. PAT deleted — generate new one before next push.
 
@@ -100,14 +102,26 @@ Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally 
 | `snapshot_06_ml_baseline_v1_4232026.csv` | `b3f0ceb6be16cf57524f5b931280d9fea6d1297e72cd8f1bc3c0594bf83add4d` *(regenerated from revised outputs)* |
 | `snapshot_06_ml_baseline_v1_4232026.zip` | `b7b3e40e1544dd52d7d79da6521bb285db7a6f7ad5fbe35ffb9a9d3037104fef` |
 | `esg_slide_narrative.md` | `d0aa3af748504d42c4227c7284f28b69ee55a8d55df8e8de7df14bf502fba707` |
-| `ngrams_E_v1_4232026.png` | *(verify on next run — supersedes combined ngrams_all_pillars image)* |
-| `ngrams_S_v1_4232026.png` | *(verify on next run)* |
-| `ngrams_G_v1_4232026.png` | *(verify on next run)* |
-| `ngrams_NonESG_v1_4232026.png` | *(verify on next run)* |
+| `ngrams_E_v1_4232026.png` | `a9c2519d263c94f68ee03a79caa4a469f10e264947ff9a5b84341d831e28b558` |
+| `ngrams_S_v1_4232026.png` | `c58167167ca2efbb559d35f5c5c0732b2d5b0ea2c79eb161308804e1641c1c57` |
+| `ngrams_G_v1_4232026.png` | `87dcf271cea902c47c00c2575f69a7712795cbae3318b723839675b5f568ba2b` |
+| `ngrams_NonESG_v1_4232026.png` | `3e6f420c3160a0242d906f31786e8908fec1c0232fe7e95052bc6c3c021597ae` |
 | `ngrams_v1_4232026.csv` | `7bcee41fe22c43a45a41e7a18df037cd78f709890f0fd0fda8c1627cf8c7077f` |
 | `wordcloud_global_v1_4232026.png` | `00115d0d51c46d15c5ec7159953ca9bb15f5d38a62cb24b1f62419746f349219` |
 | `wordcloud_composite_pillars_v1_4232026.png` | `77a070fab8c88cf8b27c59c3f1c479e655a399524e9ad7b2923cd97828fc30c5` |
 | `snapshot_10_descriptive_analysis_v1_4232026.zip` | `eb39099fada1e8f999a8036b53bac293325bf7ab47cb2d8574b37be17e518c90` |
+| `snapshot_07_longformer_v1_4232026.zip` | `6aacfc06bbb0a4debb94baf17c102913bf42659eb5122ed71cf03a90e72bee0f` |
+| `longformer_embeddings.npy` | `684c816b43adeb857b09c391a7fed390b899b662086a7e64bc973f377a364d74` |
+| `longformer_labels.npy` | `3903ef5246287e23c0ea1f08c923b80ee7c191b87b891f57fffb801640ec48af` |
+| `longformer_s42_f1.pt` | `fd4bc3cb0535db3ef5f4cbea31a4a4aea2b6378b805109ffa458e7cbeed50c6e` |
+| `longformer_s42_f2.pt` | `6f55d23d61be119bf798f982cb04accfefe8c432b7f3d4648c1ad248763370ec` |
+| `longformer_s42_f3.pt` | `127f4fe2dd4e5b47474380003ef3424335dd4b48eea37248f11968b27f741a16` |
+| `longformer_s123_f1.pt` | `406c98dda18ad33809839ef28233883c7f1b940cd52ab00295cdc03a0fef959e` |
+| `longformer_s123_f2.pt` | `e4f70b21aefc44173f2b1e2f4fe949a3c77797fa33c5ffbd96a29f8c89f5d572` |
+| `longformer_s123_f3.pt` | `e8d8a97199133e85195611946b27c910cc55f4035900a830ce846fd5d2fa8225` |
+| `longformer_s7_f1.pt` | `01f614122678eaa6cd99c988d7e27fbfd70be39ae1a0ad889af544bd14bab68b` |
+| `longformer_s7_f2.pt` | `441bd71b96a50972a41e86f9aca7fd88e9ac00b637d34b26caffbfc465d92a3b` |
+| `longformer_s7_f3.pt` | `2bfde25f8b2a00eff176021c1bfb80d6c32caa3eef15db4e26ccaecae4e5bd49` |
 
 ---
 

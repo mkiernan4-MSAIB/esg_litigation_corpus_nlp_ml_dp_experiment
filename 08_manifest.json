@@ -1,0 +1,10 @@
+{
+  "script": "08_esg_xai_visualizations.py",
+  "outputs_dir": "C:\\GoogleDriveProfiles\\Michael_Fordham\\Shared drives\\ESG DL Project\\esg_project\\esg_corpus_outputs\\visualizations",
+  "plots": [
+    "roc_curves_ml_baseline.png",
+    "shap_longformer_partition.png",
+    "tsne_longformer_embeddings.png",
+    "word_clouds_by_class.png"
+  ]
+}

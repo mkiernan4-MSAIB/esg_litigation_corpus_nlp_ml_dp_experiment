@@ -35,11 +35,12 @@ warnings.filterwarnings("ignore")
 # Path resolution
 # ---------------------------------------------------------------------------
 try:
-    from config import ROOT, ESG_CORPUS_OUTPUTS, ESG_CORPUS_LABELS_CSV
+    from config import ROOT, ESG_CORPUS_OUTPUTS, ESG_CORPUS_LABELS_CSV, VERSION_SUFFIX
 except ImportError:
     ROOT = Path("/content/drive/Shared Drives/ESG DL Project/esg_project")
     ESG_CORPUS_OUTPUTS    = ROOT / "esg_corpus_outputs"
     ESG_CORPUS_LABELS_CSV = ESG_CORPUS_OUTPUTS / "esg_corpus_labels.csv"
+    VERSION_SUFFIX = "_v1_4232026"
 
 ML_DIR       = ESG_CORPUS_OUTPUTS / "ml_baseline"
 LF_DIR       = ESG_CORPUS_OUTPUTS / "longformer"
@@ -57,7 +58,7 @@ le.fit(LABEL_ORDER)
 # Load data and ML baseline artifacts
 # ---------------------------------------------------------------------------
 print("Loading ML baseline artifacts...")
-preds_df  = pd.read_csv(ML_DIR / "ml_baseline_predictions.csv")
+preds_df  = pd.read_csv(ML_DIR / f"ml_baseline_predictions{VERSION_SUFFIX}.csv")
 rf_model  = joblib.load(ML_DIR / "rf_model.pkl")
 xgb_model = joblib.load(ML_DIR / "xgb_model.pkl")
 vectorizer = joblib.load(ML_DIR / "tfidf_vectorizer.pkl")
@@ -80,7 +81,7 @@ rf_proba  = rf_model.predict_proba(X)
 xgb_proba = xgb_model.predict_proba(X)
 
 fig, axes = plt.subplots(1, 2, figsize=(15, 6), sharey=True)
-fig.suptitle("One-vs-Rest ROC Curves — ML Baseline Models", fontsize=14, fontweight="bold")
+fig.suptitle("One-vs-Rest ROC Curves -- ML Baseline Models", fontsize=14, fontweight="bold")
 
 for ax, (proba, name) in zip(axes, [(rf_proba, "Random Forest"), (xgb_proba, "XGBoost")]):
     for i, label in enumerate(LABEL_ORDER):
@@ -155,10 +156,17 @@ if lf_embeddings_path.exists() and lf_labels_path.exists():
     svm = SVC(probability=True, kernel="rbf", random_state=42)
     svm.fit(lf_emb, lf_labels)
 
+    try:
+        import torch
+        on_gpu = torch.cuda.is_available()
+    except ImportError:
+        on_gpu = False
+    n_shap_samples = 100 if on_gpu else 50
+    print(f"  SHAP nsamples={n_shap_samples} ({'GPU' if on_gpu else 'CPU'})")
     background = shap.sample(lf_emb, 50, random_state=42)
     explainer  = shap.KernelExplainer(svm.predict_proba, background)
     sample_idx = np.random.RandomState(42).choice(len(lf_emb), min(30, len(lf_emb)), replace=False)
-    shap_vals  = explainer.shap_values(lf_emb[sample_idx], nsamples=100)
+    shap_vals  = explainer.shap_values(lf_emb[sample_idx], nsamples=n_shap_samples)
 
     dim_names = [f"dim_{i}" for i in range(lf_emb.shape[1])]
     fig4, _ = plt.subplots(figsize=(11, 7))
@@ -166,12 +174,12 @@ if lf_embeddings_path.exists() and lf_labels_path.exists():
         shap_vals,
         features=lf_emb[sample_idx],
         feature_names=dim_names,
-        class_names=LABEL_ORDER,
+        class_names=list(le.classes_),
         plot_type="bar",
         show=False,
         max_display=20,
     )
-    plt.title("SHAP Attribution — Longformer CLS Embeddings (Top 20 Dimensions)", fontsize=12)
+    plt.title("SHAP Attribution -- Longformer CLS Embeddings (Top 20 Dimensions)", fontsize=12)
     plt.tight_layout()
     fig4.savefig(VIZ_DIR / "shap_longformer_partition.png", dpi=200)
     plt.close()
@@ -189,12 +197,13 @@ if lf_embeddings_path.exists():
     lf_labels = np.load(lf_labels_path)
 
     print("  Fitting t-SNE (perplexity=30, n_iter=1000)...")
-    tsne     = TSNE(n_components=2, perplexity=30, n_iter=1_000, random_state=42, n_jobs=-1)
+    tsne     = TSNE(n_components=2, perplexity=30, max_iter=1_000, random_state=42, n_jobs=-1)
     emb_2d   = tsne.fit_transform(lf_emb)
 
     fig5, ax5 = plt.subplots(figsize=(10, 8))
-    for i, label in enumerate(LABEL_ORDER):
-        mask = lf_labels == i
+    for label in LABEL_ORDER:
+        lbl_idx = le.transform([label])[0]
+        mask = lf_labels == lbl_idx
         ax5.scatter(
             emb_2d[mask, 0], emb_2d[mask, 1],
             c=LABEL_COLORS[label], label=f"{label} (n={mask.sum()})",
@@ -261,7 +270,7 @@ if best_ckpt.exists():
         ax6.bar(range(n_show), attn_s, color="steelblue", alpha=0.8)
         ax6.set_xticks(range(n_show))
         ax6.set_xticklabels(tokens_s, rotation=90, fontsize=7)
-        ax6.set_title("Longformer CLS Attention — Top Environmental Case (Last Layer, Head 0)", fontsize=11)
+        ax6.set_title("Longformer CLS Attention -- Top Environmental Case (Last Layer, Head 0)", fontsize=11)
         ax6.set_ylabel("Attention Weight")
 
         # Mark [OUTCOME] mask positions
@@ -295,4 +304,4 @@ with open(MANIFEST_OUT, "w") as f:
     json.dump(manifest, f, indent=2)
 
 print(f"\nManifest written: {MANIFEST_OUT}")
-print(f"Phase 7 — XAI visualizations complete. {len(produced)} plots saved to {VIZ_DIR}")
+print(f"Phase 7 -- XAI visualizations complete. {len(produced)} plots saved to {VIZ_DIR}")

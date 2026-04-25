@@ -14,7 +14,7 @@ esg_corpus_filtered/esg_corpus_excluded/
 # Large CSVs with full document text (24MB+ — tracked via zip only)
 # -------------------------------------------------------------------
 esg_corpus_outputs/ESG_corpus_cleaned_v1.csv
-esg_corpus_outputs/ml_baseline/ml_baseline_predictions.csv
+esg_corpus_outputs/ml_baseline/ml_baseline_predictions*.csv
 
 # -------------------------------------------------------------------
 # Model checkpoints and embeddings (GB-scale Longformer artifacts)

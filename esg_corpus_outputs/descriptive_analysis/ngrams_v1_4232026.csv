@@ -1,0 +1,241 @@
+label,type,rank,token,count
+E,unigram,1,ill,3385
+E,unigram,2,state,2758
+E,unigram,3,board,2428
+E,unigram,4,section,2292
+E,unigram,5,law,1869
+E,unigram,6,review,1843
+E,unigram,7,act,1636
+E,unigram,8,decision,1633
+E,unigram,9,administrative,1608
+E,unigram,10,county,1565
+E,unigram,11,agency,1550
+E,unigram,12,dec,1540
+E,unigram,13,states,1537
+E,unigram,14,did,1289
+E,unigram,15,school,1269
+E,unigram,16,complaint,1250
+E,unigram,17,new,1246
+E,unigram,18,public,1205
+E,unigram,19,water,1187
+E,unigram,20,united,1154
+E,bigram,1,ill dec,1487
+E,bigram,2,ill ill,1293
+E,bigram,3,united states,1089
+E,bigram,4,ilcs west,578
+E,bigram,5,mora county,574
+E,bigram,6,swepi lp,571
+E,bigram,7,cal rptr,452
+E,bigram,8,administrative review,425
+E,bigram,9,cal cal,351
+E,bigram,10,new york,341
+E,bigram,11,attorney general,307
+E,bigram,12,review law,302
+E,bigram,13,administrative agency,292
+E,bigram,14,intervenor applicants,292
+E,bigram,15,school district,282
+E,bigram,16,motion dismiss,275
+E,bigram,17,ex rel,272
+E,bigram,18,new mexico,270
+E,bigram,19,state board,260
+E,bigram,20,pollution control,252
+E,trigram,1,ill ill dec,1292
+E,trigram,2,cal cal rptr,350
+E,trigram,3,internal quotation marks,174
+E,trigram,4,il ill dec,171
+E,trigram,5,united states department,166
+E,trigram,6,pollution control board,161
+E,trigram,7,quotation marks omitted,157
+E,trigram,8,discretionary function exception,151
+E,trigram,9,swepi lp mora,149
+E,trigram,10,lp mora county,146
+E,trigram,11,administrative review law,138
+E,trigram,12,ill adm code,138
+E,trigram,13,board ill ill,137
+E,trigram,14,katrina canal breaches,124
+E,trigram,15,people ex rel,123
+E,trigram,16,control board ill,102
+E,trigram,17,comm'n ill ill,101
+E,trigram,18,illinois pollution control,96
+E,trigram,19,complaint administrative review,93
+E,trigram,20,act ilcs west,91
+S,unigram,1,state,1380
+S,unigram,2,new,1259
+S,unigram,3,york,994
+S,unigram,4,law,956
+S,unigram,5,evidence,925
+S,unigram,6,motion,871
+S,unigram,7,judgment,746
+S,unigram,8,city,690
+S,unigram,9,plaintiff's,675
+S,unigram,10,did,643
+S,unigram,11,does,625
+S,unigram,12,school,617
+S,unigram,13,education,602
+S,unigram,14,section,594
+S,unigram,15,summary,575
+S,unigram,16,public,574
+S,unigram,17,discrimination,563
+S,unigram,18,employment,540
+S,unigram,19,district,504
+S,unigram,20,esg,499
+S,bigram,1,new york,987
+S,bigram,2,summary judgment,540
+S,bigram,3,title vii,261
+S,bigram,4,united states,259
+S,bigram,5,york city,238
+S,bigram,6,public schools,206
+S,bigram,7,reported fed,205
+S,bigram,8,hac vice,193
+S,bigram,9,pro hac,193
+S,bigram,10,motion dismiss,192
+S,bigram,11,motion summary,145
+S,bigram,12,adverse employment,138
+S,bigram,13,intellectual property,138
+S,bigram,14,education clause,137
+S,bigram,15,prima facie,132
+S,bigram,16,judiciary law,123
+S,bigram,17,law section,120
+S,bigram,18,public school,117
+S,bigram,19,ed law,116
+S,bigram,20,law rep,116
+S,trigram,1,new york city,236
+S,trigram,2,pro hac vice,193
+S,trigram,3,motion summary judgment,142
+S,trigram,4,ed law rep,116
+S,trigram,5,quotation marks omitted,95
+S,trigram,6,ill ill dec,77
+S,trigram,7,internal quotation marks,74
+S,trigram,8,united states district,64
+S,trigram,9,partial summary judgment,50
+S,trigram,10,hostile work environment,46
+S,trigram,11,llp seattle wa,45
+S,trigram,12,new york state,44
+S,trigram,13,public school students,40
+S,trigram,14,issue material fact,38
+S,trigram,15,motion partial summary,37
+S,trigram,16,second amended complaint,36
+S,trigram,17,establish prima facie,35
+S,trigram,18,genuine issue material,35
+S,trigram,19,empl prac cas,34
+S,trigram,20,fair empl prac,34
+G,unigram,1,law,2796
+G,unigram,2,motion,2756
+G,unigram,3,state,2719
+G,unigram,4,rule,2577
+G,unigram,5,did,2482
+G,unigram,6,statements,2462
+G,unigram,7,complaint,2459
+G,unigram,8,company,2363
+G,unigram,9,does,2359
+G,unigram,10,board,2220
+G,unigram,11,fed,2155
+G,unigram,12,plan,2028
+G,unigram,13,act,1944
+G,unigram,14,wl,1861
+G,unigram,15,public,1768
+G,unigram,16,information,1765
+G,unigram,17,alleged,1755
+G,unigram,18,statement,1739
+G,unigram,19,section,1737
+G,unigram,20,sec,1723
+G,bigram,1,united states,1024
+G,bigram,2,summary judgment,923
+G,bigram,3,motion dismiss,847
+G,bigram,4,amended complaint,692
+G,bigram,5,reported fed,639
+G,bigram,6,intellectual property,615
+G,bigram,7,del ch,531
+G,bigram,8,new york,523
+G,bigram,9,fiduciary duty,506
+G,bigram,10,exchange act,480
+G,bigram,11,false misleading,474
+G,bigram,12,fed sec,471
+G,bigram,13,sec rep,471
+G,bigram,14,breach fiduciary,399
+G,bigram,15,quotation marks,380
+G,bigram,16,internal quotation,351
+G,bigram,17,wl del,349
+G,bigram,18,fiduciary duties,338
+G,bigram,19,emphasis added,336
+G,bigram,20,sec litig,328
+G,trigram,1,fed sec rep,471
+G,trigram,2,breach fiduciary duty,337
+G,trigram,3,internal quotation marks,333
+G,trigram,4,wl del ch,319
+G,trigram,5,quotation marks omitted,286
+G,trigram,6,united states district,234
+G,trigram,7,motion summary judgment,224
+G,trigram,8,cal cal rptr,221
+G,trigram,9,pro hac vice,202
+G,trigram,10,ed law rep,189
+G,trigram,11,reported atl rptr,134
+G,trigram,12,rule civil procedure,130
+G,trigram,13,federal rule civil,127
+G,trigram,14,strong inference scienter,126
+G,trigram,15,false misleading statements,115
+G,trigram,16,substantial likelihood liability,109
+G,trigram,17,united states fed,106
+G,trigram,18,securities exchange act,99
+G,trigram,19,securities exchange commission,99
+G,trigram,20,consolidated amended complaint,95
+Non-ESG,unigram,1,evidence,1959
+Non-ESG,unigram,2,board,1513
+Non-ESG,unigram,3,state,1405
+Non-ESG,unigram,4,service,1340
+Non-ESG,unigram,5,vet,1316
+Non-ESG,unigram,6,decision,1216
+Non-ESG,unigram,7,ptsd,1213
+Non-ESG,unigram,8,appellant,1170
+Non-ESG,unigram,9,motion,1041
+Non-ESG,unigram,10,esg,1002
+Non-ESG,unigram,11,did,998
+Non-ESG,unigram,12,law,950
+Non-ESG,unigram,13,city,928
+Non-ESG,unigram,14,states,857
+Non-ESG,unigram,15,veteran,855
+Non-ESG,unigram,16,va,788
+Non-ESG,unigram,17,does,774
+Non-ESG,unigram,18,record,758
+Non-ESG,unigram,19,county,702
+Non-ESG,unigram,20,judgment,691
+Non-ESG,bigram,1,united states,630
+Non-ESG,bigram,2,service connection,450
+Non-ESG,bigram,3,summary judgment,379
+Non-ESG,bigram,4,brown vet,348
+Non-ESG,bigram,5,derwinski vet,256
+Non-ESG,bigram,6,connection ptsd,230
+Non-ESG,bigram,7,engaged combat,195
+Non-ESG,bigram,8,reported fed,195
+Non-ESG,bigram,9,cal rptr,190
+Non-ESG,bigram,10,medical evidence,178
+Non-ESG,bigram,11,fund blackrock,173
+Non-ESG,bigram,12,new york,169
+Non-ESG,bigram,13,motion dismiss,162
+Non-ESG,bigram,14,in-service stressor,158
+Non-ESG,bigram,15,diagnosis ptsd,155
+Non-ESG,bigram,16,veterans appeals,154
+Non-ESG,bigram,17,west vet,153
+Non-ESG,bigram,18,motion summary,148
+Non-ESG,bigram,19,duty assist,147
+Non-ESG,bigram,20,cal cal,141
+Non-ESG,trigram,1,service connection ptsd,228
+Non-ESG,trigram,2,cal cal rptr,139
+Non-ESG,trigram,3,motion summary judgment,130
+Non-ESG,trigram,4,veteran engaged combat,96
+Non-ESG,trigram,5,engaged combat enemy,95
+Non-ESG,trigram,6,denied service connection,91
+Non-ESG,trigram,7,credible supporting evidence,84
+Non-ESG,trigram,8,claimed in-service stressor,82
+Non-ESG,trigram,9,post-traumatic stress disorder,81
+Non-ESG,trigram,10,united states district,77
+Non-ESG,trigram,11,board veterans appeals,74
+Non-ESG,trigram,12,stress disorder ptsd,69
+Non-ESG,trigram,13,secretary veterans affairs,67
+Non-ESG,trigram,14,statement reasons bases,65
+Non-ESG,trigram,15,quotation marks omitted,60
+Non-ESG,trigram,16,internal quotation marks,59
+Non-ESG,trigram,17,new material evidence,59
+Non-ESG,trigram,18,ed law rep,58
+Non-ESG,trigram,19,environmental support group,57
+Non-ESG,trigram,20,support group esg,56

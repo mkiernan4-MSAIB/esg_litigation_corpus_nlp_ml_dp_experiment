@@ -1,0 +1,105 @@
+{
+  "step": "07_longformer",
+  "description": "Longformer-base-4096 3-seed x 3-fold cross-validation on 444-case ESG corpus.",
+  "script": "07_esg_longformer.py",
+  "version": "v1",
+  "date_stamp": "4232026",
+  "generated_at": "2026-04-25T22:29:41.214204+00:00",
+  "model": "allenai/longformer-base-4096",
+  "max_len": 4096,
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "n_folds": 3,
+  "epochs": 5,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "effective_batch": 16,
+  "lr": 2e-05,
+  "freeze_layers": 8,
+  "use_amp": true,
+  "completed_folds": [
+    "s42_f1",
+    "s42_f2",
+    "s42_f3",
+    "s123_f1",
+    "s123_f2",
+    "s123_f3",
+    "s7_f1",
+    "s7_f2",
+    "s7_f3"
+  ],
+  "per_seed_results": {
+    "42": {
+      "fold_f1s": [
+        0.4265,
+        0.3842,
+        0.427
+      ],
+      "mean": 0.4126,
+      "std": 0.0201
+    },
+    "123": {
+      "fold_f1s": [
+        0.4392,
+        0.4816,
+        0.3725
+      ],
+      "mean": 0.4311,
+      "std": 0.0449
+    },
+    "7": {
+      "fold_f1s": [
+        0.4625,
+        0.4381,
+        0.4877
+      ],
+      "mean": 0.4628,
+      "std": 0.0202
+    }
+  },
+  "global_macro_f1_mean": 0.4355,
+  "global_macro_f1_std": 0.037,
+  "embedding_shape": [
+    444,
+    768
+  ],
+  "sha256_embeddings": "684c816b43adeb857b09c391a7fed390b899b662086a7e64bc973f377a364d74",
+  "sha256_labels": "3903ef5246287e23c0ea1f08c923b80ee7c191b87b891f57fffb801640ec48af",
+  "sha256_checkpoints": {
+    "longformer_s42_f1.pt": "fd4bc3cb0535db3ef5f4cbea31a4a4aea2b6378b805109ffa458e7cbeed50c6e",
+    "longformer_s42_f2.pt": "6f55d23d61be119bf798f982cb04accfefe8c432b7f3d4648c1ad248763370ec",
+    "longformer_s42_f3.pt": "127f4fe2dd4e5b47474380003ef3424335dd4b48eea37248f11968b27f741a16",
+    "longformer_s123_f1.pt": "406c98dda18ad33809839ef28233883c7f1b940cd52ab00295cdc03a0fef959e",
+    "longformer_s123_f2.pt": "e4f70b21aefc44173f2b1e2f4fe949a3c77797fa33c5ffbd96a29f8c89f5d572",
+    "longformer_s123_f3.pt": "e8d8a97199133e85195611946b27c910cc55f4035900a830ce846fd5d2fa8225",
+    "longformer_s7_f1.pt": "01f614122678eaa6cd99c988d7e27fbfd70be39ae1a0ad889af544bd14bab68b",
+    "longformer_s7_f2.pt": "441bd71b96a50972a41e86f9aca7fd88e9ac00b637d34b26caffbfc465d92a3b",
+    "longformer_s7_f3.pt": "2bfde25f8b2a00eff176021c1bfb80d6c32caa3eef15db4e26ccaecae4e5bd49"
+  },
+  "checkpoint_note": "Checkpoints excluded from zip (568 MB each x 9 = ~5.1 GB). SHA-256 hashes recorded above for integrity verification.",
+  "frozen_feature_matrix": "feature_matrix_v1_frozen.csv",
+  "frozen_sha256": "a2b95dfd616fc8573c1f27a4d4a4b18c02136c011a9ded6772b28bb75a00283e",
+  "rows": 9,
+  "columns": [
+    "seed",
+    "fold",
+    "macro_f1",
+    "seed_mean",
+    "seed_std"
+  ],
+  "sha256_csv": "6194d38d0a4b6b36096d1899c000450a9bd67e22fe53d93b37ee5383cf81ea19",
+  "manifest": "07_manifest.json",
+  "decisions": [
+    "Longformer required: 99.1% of 444 cases exceed 512-token BERT limit (avg 8,824 tokens/case)",
+    "AMP FP16 mixed precision (GradScaler + autocast) for Colab T4 memory efficiency",
+    "Gradient checkpointing enabled to reduce GPU VRAM usage",
+    "Fold-level resume via 07_progress.json -- re-run same cell to continue interrupted session",
+    "3 seeds x 3 folds x 5 epochs; freeze_layers=8 (Longformer attention layers frozen)",
+    "Global Macro-F1: 0.4355 +/- 0.0370 -- underperforms XGBoost (0.7684) on 444-case corpus",
+    "Underperformance expected: Longformer pre-trained on general text, fine-tuned on n=444",
+    "CLS embeddings (shape 444 x 768) saved for downstream t-SNE / SHAP in script 08"
+  ]
+}

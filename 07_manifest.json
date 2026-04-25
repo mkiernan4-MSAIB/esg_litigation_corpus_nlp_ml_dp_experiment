@@ -1,0 +1,61 @@
+{
+  "script": "07_esg_longformer.py",
+  "model": "allenai/longformer-base-4096",
+  "max_len": 4096,
+  "batch_size": 1,
+  "grad_accum": 16,
+  "effective_batch": 16,
+  "lr": 2e-05,
+  "epochs": 5,
+  "seeds": [
+    42,
+    123,
+    7
+  ],
+  "n_folds": 3,
+  "freeze_layers": 8,
+  "use_amp": true,
+  "completed_folds": [
+    "s42_f1",
+    "s42_f2",
+    "s42_f3",
+    "s123_f1",
+    "s123_f2",
+    "s123_f3",
+    "s7_f1",
+    "s7_f2",
+    "s7_f3"
+  ],
+  "per_seed_results": {
+    "42": {
+      "fold_f1s": [
+        0.4265,
+        0.3842,
+        0.427
+      ],
+      "mean": 0.4126,
+      "std": 0.0201
+    },
+    "123": {
+      "fold_f1s": [
+        0.4392,
+        0.4816,
+        0.3725
+      ],
+      "mean": 0.4311,
+      "std": 0.0449
+    },
+    "7": {
+      "fold_f1s": [
+        0.4625,
+        0.4381,
+        0.4877
+      ],
+      "mean": 0.4628,
+      "std": 0.0202
+    }
+  },
+  "global_macro_f1_mean": 0.4355,
+  "global_macro_f1_std": 0.037,
+  "outputs_dir": "/content/drive/Shareddrives/ESG DL Project/esg_project/esg_corpus_outputs/longformer"
+}
