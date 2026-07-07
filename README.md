@@ -4,7 +4,7 @@
 
 Classifies 1,282 Westlaw litigation documents into Environmental (E), Social (S), Governance (G), and Non-ESG categories using NLP and deep learning. Taxonomy anchored in external regulatory authority only (GHG Protocol, UN Guiding Principles, ERISA § 404, UN Brundtland Commission).
 
-**GitHub:** https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment
+**GitHub:** https://github.com/michaeljkiernan/esg_litigation_corpus_nlp_ml_dp_experiment
 
 ---
 

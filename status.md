@@ -9,9 +9,9 @@
 
 Preprocessing pipeline complete (scripts 01–05). ML baseline executed locally (script 06) — 27 plots, all bugs resolved, reproducibility zip regenerated (23.6 MB). Descriptive analysis executed locally (script 10) — 11 PNGs (6 word clouds + 4 per-pillar n-gram panels + 1 composite) + n-gram CSV produced. Script 07 complete — Longformer fine-tuning finished on Colab T4: 9/9 folds (3 seeds × 3 folds), final Macro-F1=0.4355 ± 0.0370, CLS embeddings extracted (444×768). Script 08 now unblocked. Versioned reproducibility package committed and pushed to GitHub. PowerPoint revision (9 slides) still pending — slide narrative prose ready in `esg_slide_narrative.md`.
 
-**GitHub repo:** https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment  
+**GitHub repo:** https://github.com/michaeljkiernan/esg_litigation_corpus_nlp_ml_dp_experiment  
 **Latest commit:** f4229dc — revised ML baseline (27 plots), Longformer training script, step-10 descriptive analysis  
-**Auth method:** SSH (ed25519). Remote set to `git@github.com:mkiernan4-MSAIB/...`. No PATs required. Push with `git push origin master`.
+**Auth method:** SSH (ed25519). Remote set to `git@github.com:michaeljkiernan/...`. No PATs required. Push with `git push origin master`.
 
 **REMAINING EXECUTION:**
 1. Run `07_esg_longformer.py` in Colab T4/A100 — produces Longformer checkpoints + CLS embeddings.
@@ -194,4 +194,4 @@ Every revised slide must be written in narrative prose sentences — no bullet p
 | Label construction snapshot | `snapshots/snapshot_04_label_construction.{csv,json}` |
 | Text cleaning snapshot | `snapshots/snapshot_05_text_cleaning.{csv,json}` |
 | ML baseline snapshot | `snapshots/snapshot_06_ml_baseline.{csv,json}` |
-| GitHub repo | `https://github.com/mkiernan4-MSAIB/esg_litigation_corpus_nlp_ml_dp_experiment` |
+| GitHub repo | `https://github.com/michaeljkiernan/esg_litigation_corpus_nlp_ml_dp_experiment` |
